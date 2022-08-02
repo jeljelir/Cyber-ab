@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+{% block title %} Ethical Hacking Course {% endblock %}
+{% block active_home %}active{% endblock %}
+
+{% block content %}
+<section id="contactus-header" class="bg-courses-img" style="background-image: url({{ url_for('static', filename='img/ethical-hacking.jpg') }});">
+    <div class="overlay-contact"></div>
+    <div class="container">
+        <div class="row text-center d-flex justify-content-center align-items-center row-height">
+            <div class="col-12">
+                <h1 class="main-heading text-white">Ethical Hacking Courses</h1>
+                <p class="sub-heading text-white text-width">Taking a course in ethical hacking will teach you how to increase the security of a network by teaching you how to do penetration testing and how to build up a hacking lab. Hacking courses are led by teachers that have experience in the real world and give instruction in ethical hacking to provide students with the knowledge, skills, and tools necessary to keep their networks secure.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="content-courses">
+    <div class="container">
+        <div class="row courses">
+
+            <div class="col-sm-12 col-lg-6 mb-sm-0 mb-lg-5">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="{{ url_for('course01') }}">
+                        <figure class="snip1295">
+                           <img src="{{ url_for('static', filename='img/01.png') }}" alt="Ethical Hacking">
+                            <div class="border one">
+                                <div></div>
+                            </div>
+                            <div class="border two">
+                                <div></div>
+                            </div>
+                        </figure>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="course-text mt-2">
+                            <a href="{{ url_for('course01') }}" class="text-decoration-none"><h1 class="main-heading green-color">Ethical<span class="blue-color"> Hacking</span></h1></a>
+                            <p class="sub-heading text-black">Hacking has been part of computers for about 50 years and is a diverse field. First known hacking occurred in 1960 at MIT, where the word "hacker" was first invented.</p>
+                            <a href="{{ url_for('course01') }}" class="course-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 mb-sm-0 mb-lg-5">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="{{ url_for('course02') }}">
+                        <figure class="snip1295">
+                            <img src="{{ url_for('static', filename='img/02.png') }}" alt="Ethical Hacking">
+                            <div class="border one">
+                                <div></div>
+                            </div>
+                            <div class="border two">
+                                <div></div>
+                            </div>
+                        </figure>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="course-text mt-2">
+                            <a href="{{ url_for('course02') }}" class="text-decoration-none"><h1 class="main-heading green-color">Passive<span class="blue-color"> Reconnaissance</span></h1></a>
+                            <p class="sub-heading text-black">Ethical hacking begins with information gathering and target system knowledge.</p>
+                            <a href="{{ url_for('course02') }}" class="course-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 mb-sm-0 mb-lg-5">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="{{ url_for('course03') }}">
+                        <figure class="snip1295">
+                            <img src="{{ url_for('static', filename='img/03.png') }}" alt="Ethical Hacking">
+                            <div class="border one">
+                                <div></div>
+                            </div>
+                            <div class="border two">
+                                <div></div>
+                            </div>
+                        </figure>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="course-text mt-2">
+                            <a href="{{ url_for('course03') }}" class="text-decoration-none"><h1 class="main-heading green-color">Social<span class="blue-color"> Engineering</span></h1></a>
+                            <p class="sub-heading text-black">Social engineering manipulates individuals into divulging secret information.</p>
+                            <a href="{{ url_for('course03') }}" class="course-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 mb-sm-0 mb-lg-5">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="{{ url_for('course04') }}">
+                        <figure class="snip1295">
+                            <img src="{{ url_for('static', filename='img/04.png') }}" alt="Ethical Hacking">
+                            <div class="border one">
+                                <div></div>
+                            </div>
+                            <div class="border two">
+                                <div></div>
+                            </div>
+                        </figure>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="course-text mt-2">
+                            <a href="{{ url_for('course04') }}" class="text-decoration-none"><h1 class="main-heading green-color">Active<span class="blue-color"> Reconnaissance</span></h1></a>
+                            <p class="sub-heading text-black">An active reconnaissance cyberattack is a sort of computer assault in which the intruder interacts with the system that is the target of the assault in order to acquire information about the system's weaknesses.</p>
+                            <a href="{{ url_for('course04') }}" class="course-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 mb-sm-0 mb-lg-5">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="{{ url_for('course05') }}">
+                        <figure class="snip1295">
+                            <img src="{{ url_for('static', filename='img/05.png') }}" alt="Ethical Hacking">
+                            <div class="border one">
+                                <div></div>
+                            </div>
+                            <div class="border two">
+                                <div></div>
+                            </div>
+                        </figure>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="course-text mt2">
+                            <a href="{{ url_for('course05') }}" class="text-decoration-none"><h1 class="main-heading green-color">Vulnerability<span class="blue-color"> Assessment</span></h1></a>
+                            <p class="sub-heading text-black">A computer system vulnerability is a fault or weakness that might be exploited to inflict harm or enable an attacker to influence the system.</p>
+                            <a href="{{ url_for('course05') }}" class="course-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 mb-sm-0 mb-lg-5">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="{{ url_for('course06') }}">
+                        <figure class="snip1295">
+                            <img src="{{ url_for('static', filename='img/06.png') }}" alt="Ethical Hacking">
+                            <div class="border one">
+                                <div></div>
+                            </div>
+                            <div class="border two">
+                                <div></div>
+                            </div>
+                        </figure>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="course-text mt-2">
+                            <a href="{{ url_for('course06') }}" class="text-decoration-none"><h1 class="main-heading green-color">Password<span class="blue-color"> Cracking</span></h1></a>
+                            <p class="sub-heading text-black">Passwords unlock a system or account. People usually use easy-to-remember passwords like their birthdays, family members' names, cellphone numbers, etc.</p>
+                            <a href="{{ url_for('course06') }}" class="course-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 mb-sm-0 mb-lg-5">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="{{ url_for('course07') }}">
+                        <figure class="snip1295">
+                            <img src="{{ url_for('static', filename='img/07.png') }}" alt="Ethical Hacking">
+                            <div class="border one">
+                                <div></div>
+                            </div>
+                            <div class="border two">
+                                <div></div>
+                            </div>
+                        </figure>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="course-text mt2">
+                            <a href="{{ url_for('course07') }}" class="text-decoration-none"><h1 class="main-heading green-color">Exploit<span class="blue-color">ation</span></h1></a>
+                            <p class="sub-heading text-black">Exploitation is a tool or script that allows hackers to exploit a system's weaknesses. Hackers uncover vulnerabilities using Nessus, Nexpose, OpenVAS, etc.</p>
+                            <a href="{{ url_for('course07') }}" class="course-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 mb-sm-0 mb-lg-5">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="{{ url_for('course08') }}">
+                        <figure class="snip1295">
+                            <img src="{{ url_for('static', filename='img/08.png') }}" alt="Ethical Hacking">
+                            <div class="border one">
+                                <div></div>
+                            </div>
+                            <div class="border two">
+                                <div></div>
+                            </div>
+                        </figure>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="course-text mt2">
+                            <a href="{{ url_for('course08') }}" class="text-decoration-none"><h1 class="main-heading green-color">Email<span class="blue-color"> Hijacking</span></h1></a>
+                            <p class="sub-heading text-black">Nowadays, email hijacking, or email hacking, has become a common problem. Email spoofing, social engineering tools, and computer virus injection are all methods used to carry out this attack.</p>
+                            <a href="{{ url_for('course08') }}" class="course-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 mb-sm-0 mb-lg-5">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="{{ url_for('course09') }}">
+                        <figure class="snip1295">
+                            <img src="{{ url_for('static', filename='img/09.png') }}" alt="Ethical Hacking">
+                            <div class="border one">
+                                <div></div>
+                            </div>
+                            <div class="border two">
+                                <div></div>
+                            </div>
+                        </figure>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="course-text mt2">
+                            <a href="{{ url_for('course09') }}" class="text-decoration-none"><h1 class="main-heading green-color">Wireless<span class="blue-color"> Hacking</span></h1></a>
+                            <p class="sub-heading text-black">A wireless network connects two or more devices using radio waves in a confined area. Wireless network devices may move while staying connected and sharing data.</p>
+                            <a href="{{ url_for('course09') }}" class="course-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 mb-sm-0 mb-lg-5">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="{{ url_for('course10') }}">
+                        <figure class="snip1295">
+                            <img src="{{ url_for('static', filename='img/10.png') }}" alt="Ethical Hacking">
+                            <div class="border one">
+                                <div></div>
+                            </div>
+                            <div class="border two">
+                                <div></div>
+                            </div>
+                        </figure>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="course-text mt2">
+                            <a href="{{ url_for('course10') }}" class="text-decoration-none"><h1 class="main-heading green-color">Final<span class="blue-color"> Assessment</span></h1></a>
+                            <p class="sub-heading text-black">All persons who engage in Ethical Hacking are encouraged to voluntarily get certified via testing, which is endorsed by CyberLab.</p>
+                            <a href="{{ url_for('course10') }}" class="course-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

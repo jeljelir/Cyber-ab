@@ -1,0 +1,129 @@
+{% extends 'base-course.html' %}
+{% block title %} Course 10: Final Assessment {% endblock %}
+{% block courseNumber %}10{% endblock %}
+{% block form1 %}What about this <a href="http://change-browser.hax.w3challs.com/" target="_blank">CTF</a>?{% endblock %}
+{% block formHint %}No worries, you can go further by typing "yes" as the answer. However, do you know how to change the User Agent of your browser?{% endblock %}
+
+{% block courseContent %}
+    <section id="detail-content" class="detail-content">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm-12 col-lg-3 left-menu">
+                    <div class="bg-blue-color">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="course-deatail-img p-3 bg-white-color">
+                                     <img src="{{ url_for('static', filename='img/10.png') }}" alt="Final Assessment">
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white text-center">Final Assessment</h1>
+                                <p class="text-white text-justify pb-3">All persons who engage in Ethical Hacking are encouraged to voluntarily get certified via testing, which is endorsed by CyberLab.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-color pb-4">
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white">All Courses</h1>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course01') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                        <span class="sub-heading text-white">01. Introduction</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course02') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course03') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                        <span class="sub-heading text-white">03. Social Engineering</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course04') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course05') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course06') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                        <span class="sub-heading text-white">06. Password Cracking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course07') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                        <span class="sub-heading text-white">07. Exploitation</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course08') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                        <span class="sub-heading text-white">08. Email Hijacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course09') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 active">
+                                    <a href="{{ url_for('course10') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                        <span class="sub-heading text-white">10. Final Assessment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-9">
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                        <div class="col-12">
+                            <h1 class="main-heading-detail green-color">Final<span class="blue-color"> Assessment</span></h1>
+                            <p class="sub-heading margin-sub-heading text-black">All persons who engage in Ethical Hacking are encouraged to voluntarily get certified via testing, which is endorsed by CyberLab.</p>
+                            <p class="sub-heading margin-sub-heading text-black">Certification is beneficial to the protection of consumers since it verifies an individual's level of knowledge and skill in a particular field of endeavor.</p>
+                            <p class="sub-heading margin-sub-heading text-black">In the field of ethical hacking, obtaining a CyberLab certification is considered to be of the utmost importance and results in official acknowledgment.</p>
+                            <p class="sub-heading margin-sub-heading text-black">CyberLab accreditation encourages the safe and effective delivery of Ethical Hacking services in any practice context. This is accomplished by establishing standards of expertise and knowledge necessary for the competent and ethical practice of hacking.</p>
+                        </div>
+                    </div>
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-5">
+                        <div class="col-12">
+                        <h1 class="main-heading-detail green-color">Course<span class="blue-color"> Curriculum</span></h1>
+                        <section class="accordion" role="tabpanel" aria-live="polite" data-behavior="accordion">
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title"  role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Quiz
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSciHANtPPdw0xoPhh_DofQNL_U6IWO363pTKAEGdC_LQPuGFw/viewform?embedded=true" width="640" height="9634" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    
+                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

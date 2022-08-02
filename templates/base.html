@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- description -->
+        <meta name="description" content="{% block description %} {% endblock %}">
+        <!-- keywords -->
+        <meta name="keywords" content="{% block keywords %} {% endblock %}">
+        <!-- Page Title -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}">
+        <!-- Favicon -->
+        <link rel="icon" href="{{ url_for('static', filename='img/favicon.gif') }}">
+        <!-- Bundle -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bundle.min.css') }}">
+        <!-- Plugin Css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/cubeportfolio.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/line-awesome.min.css') }}">
+        <!-- Style Sheet -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body data-spy=" " data-target=".navbar" data-offset="150">
+        <!--SCROLL TOP BUTTON-->
+        <a class="scroll-top-arrow" href="javascript:void(0);"><i class="fa fa-angle-up"></i></a>
+
+        <!--  PRELOADER  -->
+        <div class="loader1">
+            <div class="loading-area">
+                <div class="circle"></div>
+                <div class="circle-small"></div>
+                <div class="circle-big"></div>
+                <div class="circle-inner-inner"></div>
+                <div class="circle-inner"></div>
+            </div>
+        </div>
+
+        <header>
+            <!--  NAVBAR FOR LARGE SCREEN-->
+            <nav id="my-nav1" class="navbar navbar-expand-lg navbar-light bg-light stroke navbar-dark-vision">
+                <div class="container">
+                    <a href="{{ url_for('index') }}" class="CyberLab">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="CyberLab" class="logo-dark default">
+                    </a>
+
+                    <div class="my-tog-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent1" >
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link {% block active_home %}{% endblock %}" href="{{ url_for('index') }}">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% block active_about %}{% endblock %}" href="{{ url_for('about') }}">About</a>
+                            </li>
+                        </ul>
+                        <a class="btn btn-primary rounded-pill navbar-btn {% block active_nmap %}{% endblock %}" href="{{ url_for('nmap') }}">Nmap</a>
+                        <a class="btn btn-primary rounded-pill navbar-btn {% block active_wapiti %}{% endblock %}" href="{{ url_for('wapiti') }}">Wapiti</a>
+                        <a class="btn btn-primary rounded-pill navbar-btn {% block active_sslyze %}{% endblock %}" href="{{ url_for('sslyze') }}">SSLyze</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="outer-window">
+                <div class="navbar-content">
+
+                    <nav class="navbar1">
+                        <a class="close-outerwindow"><i class="las la-times"></i></a>
+                        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo" class="logo-small-nav default"></a>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link {{ self.active_home() }}" href="{{ url_for('index') }}">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ self.active_about() }}" href="{{ url_for('about') }}">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('nmap') }}">Nmap</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('wapiti') }}">Wapiti</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('sslyze') }}">SSLyze</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        {% block content %} {% endblock %}
+
+        <!--Footer-->
+        <section id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center footer-content">
+                        <ul class="footer-icon">
+                            <li class="footer_list"><a href="https://github.com/jeljelir" target="_blank"><i class="fab fa-github"></i></a></li>
+                            <li class="footer_list"><a href="https://www.linkedin.com/in/miladnikooee" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                        <p class="sub-heading footer_text text-black"><i class="far fa-copyright"></i>2022 - Milad Nikooee</p>
+        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- JavaScript -->
+        <script src="{{ url_for('static', filename='js/bundle.min.js') }}"></script>
+        
+        <!-- Plugin Js -->
+        <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.cubeportfolio.min.js') }}"></script>
+        
+        <!-- custom script -->
+        <script src="{{ url_for('static', filename='js/mediaelement-and-player.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/parallaxie.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+</html>

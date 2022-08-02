@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% block title %} Perform Wapiti WebApp Scan {% endblock %}
+{% block active_wapiti %}active{% endblock %}
+
+{% block content %}
+    <section id="contactus-header" class="bg-course-detail-img" style="background-image: url({{ url_for('static', filename='img/wapiti.jpg') }});">
+        <div class="overlay-contact"></div>
+        <div class="container">
+            <div class="row text-center d-flex justify-content-center align-items-center">
+                <div class="col-12">
+                    <h1 class="main-heading text-white">Wapiti WebApp Scanner</h1>
+                    <p class="sub-heading text-white">
+                        Wapiti works as a "black-box" vulnerability scanner, that means it won't study the source code of web applications but will work like a fuzzer, scanning the pages of the deployed web application, extracting links and forms and attacking the scripts, sending payloads and looking for error messages, special strings or abnormal behaviors.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="container">
+            <div class="row mt-5 mb-5">
+                <div class="col-12 text-center">
+                    <h1 class="main-heading-detail green-color">Try it<span class="blue-color"> Yourself</span></h1>
+                    <div class="alert alert-warning" role="alert">
+                        This online version of Wapiti is provided for informational and educational purpose only. CyberLab will not be responsible for any action performed by any reader.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <form method="post" name="wapiti" style="width: 100%;" onsubmit="document.getElementById('valid').disabled=true;">
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Target Host (Include http(s)://)</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" name="host" id="host" placeholder="e.g. https://scanme.nmap.org" onkeyup="validateForm(); wapitiCommand();" onclick="validateForm(); wapitiCommand();" required></input>
+                        </div>
+                    </div>
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Attack Scope (--scope)</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scopeOption" value="--scope url " onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Attack the exact base URL (url)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scopeOption" value="--scope page " onclick="wapitiCommand();">
+                                    <label class="form-check-label">Attack every URL matching the path of the base URL (page)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scopeOption" value="--scope folder " onclick="wapitiCommand();">
+                                    <label class="form-check-label">Attack every URL starting with the base URL value (folder)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scopeOption" value="--scope domain " onclick="wapitiCommand();">
+                                    <label class="form-check-label">Attack every URL whose domain name match the base URL (domain)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Modules (-m)</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="backup" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Uncover backup files (backup)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="blindsql" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Detect SQL injection vulnerabilities (blindsql)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="brute_login_form" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Bruteforce known weak credentials (brute_login_form)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="buster" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Brute force paths on the web-server (buster)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="cookieflags" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Evaluate the security of cookies (cookieflags)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="crlf" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Detect Carriage Return Line Feed injection (crlf)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="csp" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Evaluate the security level of Content Security Policies (csp)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="csrf" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Detect forms missing Cross-Site Request Forgery protections (csrf)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="exec" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Detect scripts vulnerable to command and/or code execution. (exec)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="file" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label"> Detect file-related vulnerabilities (file)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="htaccess" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Attempt to bypass access controls (htaccess)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="http_headers" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Evaluate the security of HTTP headers (http_headers)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="methods" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Detect uncommon HTTP methods (methods)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="nikto" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Perform a brute-force attack to uncover known and potentially dangerous scripts (nikto)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="permanentxss" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Detect Cross-Site Scripting vulnerabilities (permanentxss)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="redirect" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Detect Open Redirect vulnerabilities (redirect)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="shellshock" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Detects ShellShock vulnerability (shellshock)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="sql" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">etect SQL injection vulnerabilities (sql)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="ssrf" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Detect Server-Side Request Forgery vulnerabilities (ssrf)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="wapp" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Identify web technologies (wapp)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="xss" onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Detects Cross-Site Scripting vulnerabilities (xss)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="moduleOption" value="xxe" onclick="wapitiCommand();">
+                                    <label class="form-check-label">Detect scripts vulnerable to XML external entity injection (xxe)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Attack Level (-l)</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="levelOption" value="-l 1 " onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Inject payloads in URL only if parameter presents (1)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="levelOption" value="-l 2 " onclick="wapitiCommand();">
+                                    <label class="form-check-label">Inject payloads in URL regardless hving parameter (2)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Verbosity (-v)</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="verbosityOption" value="-v 0 " onclick="wapitiCommand();" checked>
+                                    <label class="form-check-label">Quiet (0)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="verbosityOption" value="-v 1 " onclick="wapitiCommand();">
+                                    <label class="form-check-label">Print each URL (1)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="verbosityOption" value="-v 2 " onclick="wapitiCommand();">
+                                    <label class="form-check-label">Print every attack (2)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Command</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="command" name="command" onkeypress="return false;" readonly></input>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Passphrase</label>
+                        <div class="col-sm-5">
+                            <input class="form-control" type="password" name="passphrase" id="passphrase" required></input>
+                        </div>
+                        <div class="col-sm-5">
+                            <button type="submit" id="valid" class="btn btn-large btn-primary contact-btn w-100 text-white contact_btn">SCAN IT</button>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">
+                        function validateForm() {
+                            // set the button to enabled by default
+                            document.getElementById('valid').disabled=false;
+                            var host = document.getElementById('host');
+                            // set defult backgrounds
+                            host.style = "background-color: fff;";
+                            // check if the field "host" is non-empty, is a url
+                            if (host.value == "" || /(http(s)?):\/\/[(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/.test(host.value) == false) {
+                                console.log("Invalid host: " + host);
+                                document.getElementById('valid').disabled=true;
+                                // change the background color of the field
+                                host.style = "background-color: #f8d7da; color: #721c24;";
+                                return false;
+                            }
+                            return true;
+                        }
+                        
+                        function wapitiCommand() {
+                            var moduleOptions = '';
+                            var inputCommand = document.getElementById('command');
+                            // get the value of the selected/typed fields
+                            var scopeOption = document.querySelector('input[name="scopeOption"]:checked').value;
+                            var levelOption = document.querySelector('input[name="levelOption"]:checked').value;
+                            var verbosityOption = document.querySelector('input[name="verbosityOption"]:checked').value;
+                            var host = document.getElementById('host').value;
+                            var moduleOptions_ = document.querySelectorAll('input[name="moduleOption"]:checked');
+                            if (moduleOptions_) {
+                                for (var cb of moduleOptions_) {
+                                    moduleOptions += cb.value + ",";
+                                }
+                            }
+                            // form the command
+                            var command = "wapiti " + scopeOption + levelOption + verbosityOption;
+                            command += "-m " + moduleOptions.slice(0, -1) + " -u " + host;
+                            // write the command
+                            inputCommand.value = command;
+                            // check the output of the function validateForm
+                            // and act accordingly
+                            if (!validateForm()) {
+                                inputCommand.style = "background-color: #f8d7da; color: #721c24;";
+                            }
+                            else {
+                                inputCommand.style = "background-color: rgba(59, 59, 59, 0.3);";
+                                // write the value on console
+                                console.log(command)
+                            }
+                        }
+                    </script>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

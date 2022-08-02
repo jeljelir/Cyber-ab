@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+        <section id="contactus-header" class="bg-course-detail-img">
+            <div class="overlay-contact"></div>
+            <div class="container">
+                <div class="row text-center d-flex justify-content-center align-items-center">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <h1 class="main-heading text-white">Ethical Hacking</h1>
+                        <p class="sub-heading text-white text-width">
+                            (Course {% block courseNumber %}{% endblock %})
+                        </p>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
+        </section>
+    {% if flag == 1 %}
+        <section>
+            <div id="con" class="container">
+                <div class="row no-gutters">
+                    <div class="col-sm-12 col-lg-12 my-5 text-center">
+                        <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                                <h1 class="main-heading-detail green-color">Unlock<span class="blue-color"> The Course</span></h1>
+                                <p>To unlock the course, you need to solve a problem or capture the flag (CTF) implemented somewhere in the page or the server.</p>
+                                <h5>Here is the problem you need to solve:</h5>
+                                <p>
+                                    {{ self.form1() }}
+                                </p>
+                                <form method="post" name="formCTF" class="form-row">
+                                    <div class="col-9">
+                                        <input type="text" name="question" id="question" placeholder="Capture the Flag" required/>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="submit" class="btn btn-large btn-primary contact-btn w-100 text-white" name="submit_btn" id="submit_btn">CHECK IT</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% elif flag == 2 %}
+        <section>
+            <div id="con" class="container">
+                <div class="row no-gutters">
+                    <div class="col-sm-12 col-lg-12 my-5 text-center">
+                        <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                                <div class="alert alert-danger" role="alert">
+                                    "{{ answer }}" is not a good answer! Try harder ;)
+                                </div>
+                                <div class="alert alert-info" role="alert">
+                                    Hint: {% block formHint %}{% endblock %}
+                                </div>
+                                <h1 class="main-heading-detail green-color">Unlock<span class="blue-color"> The Course</span></h1>
+                                <p>To unlock the course, you need to solve a problem or capture the flag (CTF) implemented somewhere in the page or the server.</p>
+                                <h5>Here is the problem you need to solve:</h5>
+                                <p>
+                                    {% block form1 %}{% endblock %}
+                                </p>
+                                <form method="post" name="formCTF" class="form-row">
+                                    <div class="col-9">
+                                        <input type="text" name="question" id="question" placeholder="Capture the Flag" required/>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="submit" class="btn btn-large btn-primary contact-btn w-100 text-white" name="submit_btn" id="submit_btn">CHECK IT</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% else %}
+        {% block courseContent %} {% endblock %}
+    {% endif %}
+{% endblock %}

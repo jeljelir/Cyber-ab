@@ -1,0 +1,206 @@
+{% extends 'base-course.html' %}
+{% block title %} Course 05: Vulnerability Assessment {% endblock %}
+{% block courseNumber %}05{% endblock %}
+{% block form1 %}Find the the operation system (OS) of nmap.org. The answer should be something like "Redhat".{% endblock %}
+{% block formHint %}There are number of tools that can find the remote OS and service versions. Use them; If you do not know how, take a look at <a href="https://nmap.org/book/man-os-detection.html" target="_blank">this</a> documentation.{% endblock %}
+
+{% block courseContent %}
+    <section id="detail-content" class="detail-content">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm-12 col-lg-3 left-menu">
+                    <div class="bg-blue-color">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="course-deatail-img p-3 bg-white-color">
+                                     <img src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white text-center">Vulnerability Assessment</h1>
+                                <p class="text-white text-justify pb-3">A computer system vulnerability is a fault or weakness that might be exploited to inflict harm or enable an attacker to influence the system.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-color pb-4">
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white">All Courses</h1>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course01') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                        <span class="sub-heading text-white">01. Introduction</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course02') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 ">
+                                    <a href="{{ url_for('course03') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                        <span class="sub-heading text-white">03. Social Engineering</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course04') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 active">
+                                    <a href="{{ url_for('course05') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course06') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                        <span class="sub-heading text-white">06. Password Cracking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course07') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                        <span class="sub-heading text-white">07. Exploitation</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course08') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                        <span class="sub-heading text-white">08. Email Hijacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course09') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course10') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                        <span class="sub-heading text-white">10. Final Assessment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-9">
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                        <div class="col-12">
+                            <h1 class="main-heading-detail green-color">Vulnerability<span class="blue-color"> Assessment</span></h1>
+                            <p class="sub-heading margin-sub-heading text-black">
+                            A computer system vulnerability is a fault or weakness that might be exploited to inflict harm or enable an attacker to influence the system. This is distinct from a "cyber threat" since network assets (such as a computer, database, or application) already have computer system vulnerabilities. Cybercriminals employ these weaknesses in their assaults, therefore some people use the phrases interchangeably. Computer vulnerabilities are exploited based on their nature and the attacker's motivations. These vulnerabilities might result from unforeseen software interactions, system components, or program faults. Modern network design is so sophisticated that it's impossible to find and fix all vulnerabilities. Knowing common network vulnerabilities and how to resolve them helps lessen the chance of a data breach. Here are some kinds of security vulnerabilities:</p>
+                            <p class="sub-heading margin-sub-heading text-black">Computer security vulnerabilities may be categorized by location, cause, and usage. These vulnerabilities include:</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Network vulnerabilities:</strong> Hardware or software flaws expose a network to outside infiltration. Insecure Wi-Fi and firewalls are examples.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>OS vulnerabilities:</strong> These are OS vulnerabilities that hackers may exploit to gain access to or destroy an asset. Superuser accounts and hidden backdoor programs are examples.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Humans Vulnerabilities:</strong> are often the weakest link in cybersecurity. User mistakes may disclose valuable data, provide attack sites, or interrupt systems.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Process vulnerabilities:</strong> Some process controls generate vulnerabilities (or a lack thereof). Example: weak passwords (which may also fall under human vulnerabilities).</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Software flaws:</strong> Log4j has zero-day vulnerabilities that can be exploited. These vulnerabilities are sometimes significant and need prompt response.</p>
+                            <p class="sub-heading margin-sub-heading text-black">A computer system vulnerability is a fault or weakness that might be exploited to inflict harm or enable manipulation. These vulnerabilities might result from unforeseen software interactions, system components, or program faults.</p>
+                            <p class="text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LGh2SetiKaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="text-black">&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-5">
+                        <div class="col-12">
+                        <h1 class="main-heading-detail green-color">Course<span class="blue-color"> Curriculum</span></h1>
+                        <section class="accordion" role="tabpanel" aria-live="polite" data-behavior="accordion">
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab 1: Vulnerability Assessment with OpenVAS
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            We are not going to cover the installation of OpenVAS. You can easily google it.
+                                        </p>
+                                        <p class="text-black">
+                                            OpenVAS is a free and open-source framework of services and tools that provides a comprehensive vulnerability scanning and vulnerability management solution. OpenVAS has been installed and configured for you in our Kali Linux image.
+                                        </p>
+                                        <p class="text-black">
+                                            Login to OpenVAS with the password you set during the installation.
+                                            <img src="/static/img/courses/05-01.png">
+                                        </p>
+                                        <p class="text-black">
+                                            Click on the wizard and set the IP address or the hostname of the target and start the scan.
+                                            <img src="/static/img/courses/05-02.png">
+                                        </p>
+                                        <p class="text-black">
+                                            You can also create an advanced scan to have more leverage on parameters.
+                                            <img src="/static/img/courses/05-04.png">
+                                        </p>
+                                        <p class="text-black">
+                                            You will see the progress of the scan.
+                                            <img src="/static/img/courses/05-03.png">
+                                        </p>
+                                        <p class="text-black">
+                                            If you click on the scan, you will see found vulnerabilities scored based on CVSS of CVEs.
+                                            <img src="/static/img/courses/05-05.png">
+                                        </p>
+                                        <p class="text-black">
+                                            And if you click on any item on the list, you will see details.
+                                            <img src="/static/img/courses/05-06.png">
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab 2: Vulnerability Assessment with Nikto
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            We are not going to cover the installation of Nikto. You can easily google it.
+                                        </p>
+                                        <p class="text-black">
+                                            Nikto is a simple, open-source web server scanner that examines a website and reports any vulnerabilities that could be exploited or hacked. It's also one of the most widely used website vulnerability tools in the industry, and is widely regarded as the industry standard in many circles.
+                                        </p>
+                                        <p class="text-black">
+                                            By using the parameter <code>-h</code>, we can define the IP address or the hostname of the target.
+                                            <pre>nikto -h google.com</pre>
+                                        </p>
+                                        <p class="text-black">
+                                            You can also analyze the SSL certificate of the host by using the parameter <code>-ssl</code>.
+                                            <pre>nikto -h google.com -ssl</pre>
+                                            <img src="/static/img/courses/05-07.png">
+                                        </p>
+                                        <p class="text-black">
+                                            Here is the scan of <code>scanme.nmap.org</code> that doesn't support SSL.
+                                            <pre>nikto -h scanme.nmap.org</pre>
+                                            <img src="/static/img/courses/05-08.png">
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title"  role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Quiz
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPpcUnsvdKrhdPovMkzjnWWKRMTdDKVtFb1bxsVTW8KzZqbw/viewform?embedded=true" width="640" height="2657" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

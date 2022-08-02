@@ -1,0 +1,321 @@
+{% extends 'base-course.html' %}
+{% block title %} Course 04: Active Reconnaissance {% endblock %}
+{% block courseNumber %}04{% endblock %}
+{% block form1 %}There is no flag to be captured, just tell us the name of the most popular social engineering teactic.{% endblock %}
+{% block formHint %}Just review the contents of the previous course.{% endblock %}
+
+{% block courseContent %}
+    <section id="detail-content" class="detail-content">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm-12 col-lg-3 left-menu">
+                    <div class="bg-blue-color">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="course-deatail-img p-3 bg-white-color">
+                                     <img src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white text-center">Active Reconnaissance</h1>
+                                <p class="text-white text-justify pb-3">An active reconnaissance cyberattack is a sort of computer assault in which the intruder interacts with the system that is the target of the assault in order to acquire information about the system's weaknesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-color pb-4">
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white">All Courses</h1>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course01') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                        <span class="sub-heading text-white">01. Introduction</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course02') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 ">
+                                    <a href="{{ url_for('course03') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                        <span class="sub-heading text-white">03. Social Engineering</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 active">
+                                    <a href="{{ url_for('course04') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course05') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course06') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                        <span class="sub-heading text-white">06. Password Cracking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course07') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                        <span class="sub-heading text-white">07. Exploitation</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course08') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                        <span class="sub-heading text-white">08. Email Hijacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course09') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course10') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                        <span class="sub-heading text-white">10. Final Assessment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-9">
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                        <div class="col-12">
+                            <h1 class="main-heading-detail green-color">Active<span class="blue-color"> Reconnaissance</span></h1>
+
+                            <p class="sub-heading margin-sub-heading text-black">Ethical hacking begins with information gathering and target system knowledge. Reconnaissance uses Footprinting, Scanning, and Enumeration to locate and gather information about a target system.</p>
+                            <p class="sub-heading margin-sub-heading text-black">An ethical hacker gathers as much information as possible about a target system during reconnaissance.</p>
+                            <p class="sub-heading margin-sub-heading text-black">An active reconnaissance cyberattack is a sort of computer assault in which the intruder interacts with the system that is the target of the assault in order to acquire information about the system's weaknesses.</p>
+                            <ul>
+                                <li>Collect data</li>
+                                <li>Network range</li>
+                                <li>Active machines</li>
+                                <li>Find ports and access points</li>
+                                <li>System fingerprinting</li>
+                                <li>Ports services</li>
+                                <li>Network-map</li>
+                            </ul>
+                            <p class="sub-heading margin-sub-heading text-black">Reconnaissance is active and passive. Reconnaissance is an information-gathering task. Both methods of reconnaissance are called passive assaults since they only gather information, not aggressively exploit the victim. Reconnaissance is generally the first step in exploiting a target system.</p>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/pffB-SonD_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Active Reconnaissance:</strong> You'll immediately communicate with the computer to get information. Relevant and factual information. Active reconnaissance without authority is risky. If you're caught, the system admin may punish you and track your activity.</p>
+                        </div>
+                    </div>
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-5">
+                        <div class="col-12">
+                        <h1 class="main-heading-detail green-color">Course<span class="blue-color"> Curriculum</span></h1>
+                        <section class="accordion" role="tabpanel" aria-live="polite" data-behavior="accordion">
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Footprinting
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">Footprinting is used to obtain information about a target computer system or network. Passive and active footprinting exist. Passive footprinting is reviewing a company's website; active information collecting is social engineering. Footprinting is the initial phase when hackers collect as much information as possible to intrude into a target system or select what sort of assaults to use.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/29X0_3aJ8pE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black">During this phase, a hacker may collect:</p>
+                                        <ul>
+                                            <li> Domain name and IPs</li>
+                                            <li> Namespaces</li>
+                                            <li> Employee numbers</li>
+                                            <li> E-mails</li>
+                                            <li> etc.</li>
+                                        </ul>
+                                        <p class="text-black">In the next part, we'll describe how to get basic information from any Internet-connected machine or network.</p>
+                                        <p class="text-black"><strong>The Domain Name:</strong> You may utilize http://www.whois.com/whois to find out a domain's owner, registrar, date of registration, expiration, name server, owner's contact information, etc.</p>
+                                        <p class="text-black"><strong>Finding IP:</strong> Use ping at the prompt. This command is on Windows and Linux OS.</p>
+                                        <p class="text-black"><strong>IP-ranges:</strong> Small sites may use a single IP address, while bigger sites have many IP addresses supporting various domains and subdomains. Using American Registry for Internet Numbers, you may get a company's IP addresses (ARIN).</p>
+                                        <p class="text-black"><strong>Site History:</strong> Archive.org provides a comprehensive history of any website.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Sniffing
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">Sniffing monitors and captures all network packets using sniffing tools. It's like "tapping phone cables" to hear conversations. It's computer network wiretapping. If an enterprise's switch ports are open, an employee may sniff the network's traffic. Anyone in the same place may join wirelessly or through Ethernet cable to sniff the network's activity. Sniffing reveals both protected and unprotected communication. With the correct settings and protocols, an attacking party may be able to obtain information for additional attacks or other concerns for the network or system owner.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-rSqbgI7oZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black">Sniffables things:</p>
+                                        <ul>
+                                            <li> Inboxes</li>
+                                            <li> FTP-passwords</li>
+                                            <li> Traffics</li>
+                                            <li> Telnet authentication</li>
+                                            <li> Configuring routers</li>
+                                            <li> DNS</li>
+                                            <li> etc.</li>
+                                        </ul>
+                                        <p class="text-black">A sniffer sets the system's NIC to promiscuous mode to listen to all segment data. Promiscuous mode permits network interface cards (NICs) to accept all network traffic, even if it's not targeted to them. By default, a NIC rejects all unaddressed communication by comparing the Ethernet packet's destination address to its hardware address (MAC). Non-promiscuous mode makes network monitoring and analysis tools harder to utilize for troubleshooting connection problems or traffic accounting.</p>
+                                        <p class="text-black">A sniffer can monitor all NIC traffic by decoding data packets.</p>
+                                        <p class="text-black">Snorting Types:</p>
+                                        <ul>
+                                            <li> Active</li>
+                                            <li> Passive</li>
+                                        </ul>
+                                        <p class="text-black"><strong>Passive Sniffing:</strong> Passive sniffing locks traffic without changing it. Listening-only passive sniffing. Hub-compatible. All ports on a hub get traffic. All network hosts can observe traffic in a hub-connected network. Attackers may simply grab traffic. Hubs are almost outdated. Modern networks utilize switches. Ineffective is passive smelling.</p>
+                                        <p class="text-black"><strong>Active Sniffing:</strong> Active sniffing not only locks and monitors traffic, but it may even manipulate it. Switch-based networks are sniffed actively. Injecting ARP into a target network to fill the CAM table. CAM tracks which host is on which port.</p>
+                                        <p class="text-black"><strong>Affected protocols:</strong> TCP/IP was never intended for security, hence it offers little resistance to attackers.</p>
+                                        <p class="text-black">Sniffables things:</p>
+                                        <ul>
+                                            <li> <strong>HTTP:</strong>It sends transparent text without encryption and is a genuine target.</li>
+                                            <li> <strong>SMTP:</strong>is used to transmit emails. This efficient protocol lacks sniffer protection.</li>
+                                            <li> <strong>Network News Transfer Protocol:It's</strong> utilized for all conversations, although data and passwords are delivered in clear text.</li>
+                                            <li> <strong>POP (Post Office Protocol):</strong>receives emails from servers. This protocol's sniffer vulnerability may be exploited.</li>
+                                            <li> <strong>FTP (File Transfer Protocol):</strong>sends and receives files but offers no security. All the data is plain text that can be sniffed.</li>
+                                            <li> <strong>IMAP (Internet Message Access Protocol):</strong>Like SMTP, IMAP is sensitive to sniffer.</li>
+                                            <li> <strong>Telnet:</strong>broadcasts everything (usernames, passwords, keystrokes) in clear text, therefore it's readily sniffed.</li>
+                                        </ul>
+                                        <p class="text-black">Sniffers aren't stupid utilities that show live traffic. Save the capture if you wish to study each packet.</p>
+                                        <p class="text-black"><strong>Intercepting lawfully:</strong> Lawful Interception (LI) is legally sanctioned access to phone conversations or email messages. LI must be authorized for analysis or evidence. LI is a security method that allows law enforcement to access private communications of persons or organizations. Almost all nations have written and approved legal interception laws; standardization bodies are producing LI technological requirements. Infrastructure protection and cyber security are typical LI goals. Unless otherwise forbidden, private network operators may preserve LI capabilities inside their own networks.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Sniffing Tools
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">There are several programs for sniffing network traffic, and they all have their particular capabilities to assist hackers evaluate data. Sniffing applications are widespread. Here are some intriguing ones.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/g5cj7ylpryM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black">Sniffables things:</p>
+                                        <ul>
+                                            <li> <strong>BetterCAP:</strong> is a robust, adaptable, and portable tool that can execute MITM attacks, alter HTTP, HTTPS, and TCP traffic in real-time, and sniff for passwords.</li>
+                                            <li> <strong>Wireshark:</strong>is a popular packet sniffer. It has several tools to help analyze traffic.</li>
+                                            <li> <strong>Tcpdump:</strong>Command-line packet analyzer. It can intercept TCP/IP and other network traffic. tcpdump.org A Windows version of the popular Linux packet sniffer tcpdump, which displays header information.</li>
+                                            <li> <strong>Dsniff:</strong>is a collection of sniffing tools intended to intercept and disclose passwords. Dsniff works on Unix and Linux but not Windows.</li>
+                                            <li> <strong>NetWitnessNextGen:</strong>is a hardware-based sniffer that monitors and analyzes network data. FBI and other agencies utilize this technology.</li>
+                                            <li> <strong>etc.</strong></li>
+                                        </ul>
+                                        <p class="text-black">Any of these sniffing programs may be used to examine network traffic and deconstruct data</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab: Network Reconnaissance with Nmap
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            You will see how to use tools to scan and retrieve information from a targeting system using Nmap.
+                                        </p>
+                                        <p class="text-black">
+                                            <code>nmap</code> ("Network Mapper") is a free and open source network exploration and security auditing tool. Though it was designed to quickly scan large networks, we use it in this lab to scan the target host.
+                                            <img src="/static/img/courses/04-01.png">
+                                        </p>
+                                        <pre>nmap -T4 -sT 192.168.178.102</pre>
+                                        <table class="table table-hover">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Usage</th>
+                                                <th scope="col">Description</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td><code>-p</code></td>
+                                                <td><code>nmap -p 21,22,443 1.1.1.1</code></td>
+                                                <td>Scan selected port</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>--top-ports</code></td>
+                                                <td><code>nmap --top-ports 100 1.1.1.1</code></td>
+                                                <td>Scan top 100 ports</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-sp</code></td>
+                                                <td><code>nmap -sp 1.1.1.1</code></td>
+                                                <td>Scan and ping target (ICMP)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-sT/-sU</code></td>
+                                                <td><code>nmap -sT 1.1.1.1</code></td>
+                                                <td>Scan TCP or UDP</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-oN</code></td>
+                                                <td><code>nmap -oN file.txt 1.1.1.1</code></td>
+                                                <td>Save the result in a file</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-A</code></td>
+                                                <td><code>nmap -A 1.1.1.1</code></td>
+                                                <td>Perform OS and service detection</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>--script</code></td>
+                                                <td><code>nmap --script vuln 1.1.1.1</code></td>
+                                                <td>Run the script 'vuln' on targets</td>
+                                            </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab: Network Reconnaissance with OpenVAS
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            You will see how to use tools to scan and retrieve information from a targeting system using OpenVAS to scan a vulnerable machine and identify exploits that can be used to attack it.
+                                        </p>
+                                        <p class="text-black">
+                                            OpenVAS is a free and open-source framework of services and tools that provides a comprehensive vulnerability scanning and vulnerability management solution. OpenVAS has been installed and configured for you in our Kali Linux image.
+                                        </p>
+                                        <p class="text-black">
+                                            Open OpenVAS, create a new target, start the scan, and wait for the results. You will learn more in next course.
+                                            <img src="/static/img/courses/04-02.png">
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title"  role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Quiz
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdfnYKOFriwUp1LBvPIE8rD1kleeK6KgCxhSZ6CPkS7P6me8g/viewform?embedded=true" width="640" height="3469" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

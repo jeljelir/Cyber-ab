@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} Test Results {% endblock %}
+
+{% block content %}
+    <section id="contactus-header" class="bg-course-detail-img">
+        <div class="overlay-contact"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-12">
+                    {% if messages %}
+		            <div class="alert alert-warning" role="alert">
+                        These tools are provided for informational and educational purpose only. CyberLab will not be responsible for any action performed by any reader.
+                    </div>
+					<h1 class="main-heading text-white text-center justify-content-center">Results of the Scans</h1>
+		            <p class="text-white text-center mb-5">Total Scans: {{ scans }}</p>
+		            {% for message in messages %}
+		                <div class='commandLine py-0 my-0'>
+		                    <h4 class="text-white my-0 py-0">{{ message['id'] }}: {{ message['title'] }} <span class="blue-color">{{ message['host'] }}</span></h4>
+		                    <p class="text-muted text-right my-0 py-0">Run at: {{ message['time'] }}</p>
+		                    <pre class="result">{{ message['content'] }}</pre>
+		                </div>
+		            {% endfor %}
+                    {% else %}
+                    	<h1 class="main-heading text-white text-center justify-content-center">Nothing to Show</h1>
+                    	<p class="text-white text-center mb-5">Total Scans: {{ scans }}</p>
+                    	<pre class="result">There is nothing to show. Run any scans to be shown here.</pre>
+                    	<p class="text-white text-center">
+                    		Avilable Scanners:<br>
+		            	<a class="text-white" href="{{ url_for('nmap') }}">Nmap</a> | 
+		                <a class="text-white" href="{{ url_for('wapiti') }}">Wapiti</a> | 
+		                <a class="text-white" href="{{ url_for('sslyze') }}">SSLyze</a>
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

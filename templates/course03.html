@@ -1,0 +1,186 @@
+{% extends 'base-course.html' %}
+{% block title %}Course 03: Social Engineering{% endblock %}
+{% block courseNumber %}03{% endblock %}
+{% block form1 %}Find a flag in <a href="https://jupiter.challenges.picoctf.org/problem/56830/" target="_blank"> this page</a>; it should be something like <i>picoCTF{THE_FLAG}</i>.{% endblock %}
+{% block formHint %}Read more about robots.txt; maybe this <a href="https://www.thesmartscanner.com/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it" target="_blank">link</a> helps you.{% endblock %}
+
+{% block courseContent %}
+    <section id="detail-content" class="detail-content">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm-12 col-lg-3 left-menu">
+                    <div class="bg-blue-color">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="course-deatail-img p-3 bg-white-color">
+                                     <img src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white text-center">Social Engineering</h1>
+                                <p class="text-white text-justify pb-3">Social engineering manipulates individuals into divulging secret information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-color pb-4">
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white">All Courses</h1>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course01') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                        <span class="sub-heading text-white">01. Introduction</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course02') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 active">
+                                    <a href="{{ url_for('course03') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                        <span class="sub-heading text-white">03. Social Engineering</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course04') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course05') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course06') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                        <span class="sub-heading text-white">06. Password Cracking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course07') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                        <span class="sub-heading text-white">07. Exploitation</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course08') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                        <span class="sub-heading text-white">08. Email Hijacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course09') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course10') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                        <span class="sub-heading text-white">10. Final Assessment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-9">
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                        <div class="col-12">
+                            <h1 class="main-heading-detail green-color">Social<span class="blue-color"> Engineering</span></h1>
+                            <p class="sub-heading margin-sub-heading text-black">Social engineering manipulates individuals into divulging secret information. When thieves target people, they generally attempt to mislead them into giving them passwords or bank information or accessing their computers to install malicious software that gives them access to passwords, bank information, and control over their computers. Criminals utilize social engineering because it's simpler to abuse trust than to attack software. It's simpler to get someone's password than to hack it (unless the password is really weak). Social engineering refers to harmful human interactions. It tricks users into making security blunders or handing up important information. Social engineering assaults are multistep. A criminal analyzes the targeted victim to find possible access holes and weak security mechanisms. The attacker gains the victim's confidence to get access to sensitive information or essential resources. Social engineering is harmful because it depends on human mistake, not software and OS weaknesses. Mistakes by normal users are harder to discover and stop than malware-based intrusions.</p>
+                            <h2>Social engineering methods</h2>
+                            <p class="sub-heading margin-sub-heading text-black">Social engineering assaults may happen everywhere humans interact. Five popular digital social engineering attacks are listed below.</p>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Pd7x2bHVSAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <h3>Baiting</h3>
+                            <p class="sub-heading margin-sub-heading text-black">Baiting assaults employ false promises to arouse a victim's greed or interest. They trick people into a trap that takes personal information or installs malware. Worst baiting spreads malware on physical media. Attackers put malware-infected flash drives in obvious places where victims would notice them. The bait is presented as the company's payroll list on a label. Curiosity-driven victims insert the bait onto a company or home computer, which installs malware. Baiting schemes aren't always physical. Baiting involves online adverts that link to harmful sites or entice users to download malware.</p>
+                            <h3>Scareware</h3>
+                            <p class="sub-heading margin-sub-heading text-black">False alerts and bogus dangers are used in scareware. Users are fooled into thinking their system is afflicted with malware, encouraging them to install useless (or malicious) software. Scareware is sometimes called deception software and fraudware. Scareware sometimes appears as legitimate-looking popup advertisements on your browser when browsing the web, showing phrases like "Your computer may be loaded with hazardous spyware programs." It offers to install a malware-infected program for you or directs you to a harmful site. Spam emails that issue fake warnings or offer worthless/harmful services also spread scareware.</p>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WXcAshytyPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <h3>Pretexting</h3>
+                            <p class="sub-heading margin-sub-heading text-black">An attacker pretexts to get information. A perpetrator typically pretends to require access to the victim to complete a job. The attacker frequently gains the victim's confidence by impersonating co-workers, law, bank, or tax authorities. The pretexter asks queries meant to authenticate the victim's identification to acquire personal information. This scheme gathers SSNs, private contact information, phone data, employee vacation dates, bank details, and even plant security information.</p>
+                            <h3>Phishing</h3>
+                            <p class="sub-heading margin-sub-heading text-black">Phishing schemes use email and SMS messages to create urgency, curiosity, or terror in victims. It coaxes users into providing personal information, clicking on harmful links, or opening malware-infected attachments. An email alerting online service customers of a policy infraction, such as a password change, is an example. It contains links to an illicit website that seems very similar to the real one, urging unwary users to input their identity and new password. The attacker receives form submissions. Since phishing attempts send almost similar messages to all users, mail servers with threat-sharing systems can identify and prevent them more easily.</p>
+                            <h3>Spear phishing</h3>
+                            <p class="sub-heading margin-sub-heading text-black">This targeted phishing fraud targets particular people or businesses. They customize their messages depending on victims' features, jobs, and connections to hide their assault. Spear phishing takes weeks or months to execute. Skillfully done, they're tougher to detect and more successful. An attacker impersonating an organization's IT consultant may send spear phishing emails to workers. It's phrased and signed like the consultant regularly does, misleading recipients. The mail asks users to reset their password and gives a link to a malicious website that grabs their credentials.</p>
+                            <h3>Google Dorking</h3>
+                            <p class="sub-heading margin-sub-heading text-black">Google dorking, also known as Google hacking, is the practice of supplying improved search results further into Google search in order to hunt for confidential documents on web pages that Google is cacheing as a result of site misconfiguration. These sensitive data include usernames, passwords, log files, and other information. These data are available to the public and may even be downloaded in certain instances.</p>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/u_gOnwWEXiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-5">
+                        <div class="col-12">
+                        <h1 class="main-heading-detail green-color">Course<span class="blue-color"> Curriculum</span></h1>
+                        <section class="accordion" role="tabpanel" aria-live="polite" data-behavior="accordion">
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab: Site Cloner
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            SET (Social Engineering Toolkit) will be used in this lab to create social engineering attacks.
+                                        </p>
+                                        <p class="text-black">
+                                            Navigate to the <code>/opt/setoolkit</code> directory in the terminal and execute the command <code>./setoolkit</code>. Agree to the terms of service.
+                                            <img src="/static/img/courses/03-01.png">
+                                        </p>
+                                        <p class="text-black">
+                                            Follow this steps:
+                                            <ul>
+                                                <li>Select <code>1) Social-Engineering Attacks</code>.</li>
+                                                <li>Select <code>2) Website Attack Vectors</code> to choose among web attack vectors.</li>
+                                                <li>Select <code>3) Credential Harvester Attack Method</code>.</li>
+                                                <li>Select <code>2) Site Cloner</code> to clone any website you like.</li>
+                                            </ul>
+                                        </p>
+                                        <p class="text-black">
+                                            You must assign an IP address to the cloned site. Leave the <code>IP address for the POST back in Harvester/Tabnabbing</code> as it is or set the desired IP. Then let the script know what website you would like to clone.
+                                            <img src="/static/img/courses/03-02.png">
+                                        </p>
+                                        <p class="text-black">
+                                            Now you can open the cloned website through the IP you set in the previous step.
+                                            <img src="/static/img/courses/03-03.png">
+                                        </p>
+                                        <p class="text-black">
+                                            As soon as you enter any credentials in the fake website, you will be notified in the terminal.
+                                            <img src="/static/img/courses/03-04.png">
+                                        </p>
+                                        <p class="text-black">
+                                            Your website is created, you just need to send it to your victims. You should know that gaining credentials of others without their consents is illegal.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Quiz
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9eSYWSaJju6dUtWLu4WUvDkcsoiCmHe_emctVw6rvdfveXg/viewform?embedded=true" width="640" height="2641" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

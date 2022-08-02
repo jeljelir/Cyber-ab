@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %} About CyberLab: Thesis for MSc Cybersecurity {% endblock %}
+{% block active_about %}active{% endblock %}
+
+{% block content %}
+    <section id="about-header" class="bg-about-img" style="background-image: url({{ url_for('static', filename='img/slide.jpg') }});">
+        <div class="overlay-contact"></div>
+        <div class="container">
+            <div class="row text-center d-flex justify-content-center align-items-center row-height">
+                <div class="col-12">
+                    <h1 class="main-heading text-white">Thesis for<br>MSc Cybersecurity</h1>
+                    <p class="sub-heading text-white">
+                        The widespread usage of computer systems together with their access to one another through networks and the Internet has resulted in the development of a great deal of computer security flaws. The ever-increasing development of technology and the growing tendency of people depending on computers to do their essential activities are both indications that future security issues may have more significant implications than the events that are occurring right now. The ability to hack and penetrate systems is one of the most useful abilities for building security in cyberspace, and it is also one of the most difficult to acquire. There are many distinct forms of hacking, some of which can be considered ethical while others would be considered immoral. The motivations of the hacker and the ways in which he puts his skills to use may be used as a measure to determine whether or not hacking is ethical. Many people believe that hacking is almost always harmful and wrong, but there are some people who believe that hacking can improve the security of systems as long as hacking does not cause serious harm. Some people say that hacking can improve the security of systems as long as hacking does not cause serious harm.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact-content">
+        <div class="container">
+                <h1 class="main-heading green-color text-center">Practical Thesis <br><span class="blue-color">Ethical Hacking Course</span></h1>
+                <p class="sub-heading mt-4">
+                    This introduction to ethical hacking course will teach beginners what they need to know to get started in the field of ethical hacking. Learning about Kali Linux, the methods involved in ethical hacking, a few fundamental concepts, ethical hacking tools, and ethical hacking scenarios are all part of this. You will get knowledge about various kinds of assaults as well as the tools that hackers employ to carry them out. You will also read engaging instructions on how to hack and make use of these various technologies. Let's get started with the Ethical Hacking lesson right now.
+                </p>
+                <div class="row">
+                <div class=" col-sm-12 col-md-6 col-lg-6">
+                    <div class="about_img">
+                        <p> </p>
+                        <p> </p>
+                        <img src="{{ url_for('static', filename='img/00.png') }}" alt="About CyberLab">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center mt-4 mt-md-0 mt-lg-0">
+                    <div class="about-heading">
+                        <p class="sub-heading mt-4">
+                            I'm Milad, a Cybersecurity student at UCLan Cyprus. My interest in computer security was sparked after I saw the movie The Social Network, which was directed by David Fincher and released in 2010. Ever since then, I have been constantly pursuing new developments in the field of computer security. I worked in this market for three years in close collaboration with my brother to obtain a taste of the technology business, and the need to create a security perspective enhanced my commitment to seek a master's degree in the field. Enrolling at UCLan Cyprus was like having a wish come true, and everything that's happened thereafter has been nonstop excitement. I would like to express my gratitude to my brother and to Dr. Eliana Stavrou, MSc Cybersecurity course leader, for their constant support and encouragement.
+                            <br>
+                            In addition to being grateful to my supervisor, I would also want to express my appreciation to Dr. Andreas Savva, who led and directed me down this muddy route. And at the end, I wanna say thank you to Dr. Josephina Antoniou, MSc Computing course leader, and thesis lecturer for all fields that she taught me.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

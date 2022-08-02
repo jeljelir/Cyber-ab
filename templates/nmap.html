@@ -1,0 +1,298 @@
+{% extends 'base.html' %}
+{% block title %} Perform Nmap Scan {% endblock %}
+{% block active_nmap %}active{% endblock %}
+
+{% block content %}
+    <section id="contactus-header" class="bg-course-detail-img" style="background-image: url({{ url_for('static', filename='img/nmap.jpg') }});">
+        <div class="overlay-contact"></div>
+        <div class="container">
+            <div class="row text-center d-flex justify-content-center align-items-center">
+                <div class="col-12">
+                    <h1 class="main-heading text-white">Nmap Port Scaner</h1>
+                    <p class="sub-heading text-white">
+                        Nmap, short for Network Mapper, is a free and open source utility for network discovery and security auditing. Many systems and network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics. It was designed to rapidly scan large networks, but works fine against single hosts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="container">
+            <div class="row mt-5 mb-5">
+                <div class="col-12 text-center">
+                    <h1 class="main-heading-detail green-color">Try it<span class="blue-color"> Yourself</span></h1>
+                    <div class="alert alert-warning" role="alert">
+                        This online version of Nmap is provided for informational and educational purpose only. CyberLab will not be responsible for any action performed by any reader.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <form method="post" name="wapiti" style="width: 100%;" onsubmit="document.getElementById('valid').disabled=true;">
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Target Host (Include http(s)://)</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" name="host" id="host" placeholder="e.g. 1.1.1.1, scanme.nmap.org" onkeyup="validateForm(); nmapCommand();" onclick="validateForm(); nmapCommand();" required></input>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Ports</label>
+                        <div class="col-sm-5">
+                            <input class="form-control" type="text" name="ports" id="ports" placeholder="-p XXX  e.g. 22, 22-443, 22,53, or 21-22,443" onkeyup="validateForm(); nmapCommand();" onclick="validateForm(); nmapCommand();" required></input>
+                        </div>
+                        <div class="col-sm-5">
+                            <input class="form-control" type="number" name="topPorts" id="topPorts" min="1" step="1" max="1000" placeholder="--top-ports XXX  e.g. 100" onkeyup="validateForm(); nmapCommand();" onclick="validateForm(); nmapCommand();" required></input>
+                        </div>
+                    </div>
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Scan Technique</legend>
+                            <div class="col-sm-10">
+                               <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scanOption" value="-sS " onclick="nmapCommand();" checked>
+                                    <label class="form-check-label">TCP SYN (Stealth) Scan (<a href="https://nmap.org/book/synscan.html">-sS</a>)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scanOption" value="-sT " onclick="nmapCommand();">
+                                    <label class="form-check-label">TCP Connect Scan (<a href="https://nmap.org/book/scan-methods-connect-scan.html">-sT</a>)</label>
+                                </div>
+                               <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scanOption" value="-sU " onclick="nmapCommand();">
+                                    <label class="form-check-label">UDP Scan (<a href="https://nmap.org/book/scan-methods-udp-scan.html">-sU</a>)</label>
+                                </div>
+                               <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scanOption" value="-sF " onclick="nmapCommand();">
+                                    <label class="form-check-label">
+                                    <label class="form-check-label">TCP FIN Scans (<a href="https://nmap.org/book/scan-methods-null-fin-xmas-scan.html">-sF</a>)</label>
+                                </div>
+                               <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scanOption" value="-sN " onclick="nmapCommand();">
+                                    <label class="form-check-label">TCP NULL Scans (<a href="https://nmap.org/book/scan-methods-null-fin-xmas-scan.html">-sN</a>)</label>
+                                </div>
+                               <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scanOption" value="-sX " onclick="nmapCommand();">
+                                    <label class="form-check-label">TCP Xmas Scans (<a href="https://nmap.org/book/scan-methods-null-fin-xmas-scan.html">-sX</a>)</label>
+                                </div>
+                               <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scanOption" value="-sA " onclick="nmapCommand();">
+                                    <label class="form-check-label">TCP ACK Scan (<a href="https://nmap.org/book/scan-methods-ack-scan.html">-sA</a>)</label>
+                                </div>
+                               <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scanOption" value="-sW " onclick="nmapCommand();">
+                                    <label class="form-check-label">TCP Window Scan (<a href="https://nmap.org/book/scan-methods-window-scan.html">-sW</a>)</label>
+                                </div>
+                               <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scanOption" value="-sM " onclick="nmapCommand();">
+                                    <label class="form-check-label">TCP Maimon Scan (<a href="https://nmap.org/book/scan-methods-maimon-scan.html">-sM</a>)</label>
+                                </div><br>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Host Discovery</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="discoveryOption" value="-Pn " onclick="nmapCommand();">
+                                    <label class="form-check-label">Skip Ping Test (-Pn)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="discoveryOption" value="-sn " onclick="nmapCommand();">
+                                    <label class="form-check-label">Skip Port Scan (-sn)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="discoveryOption" value="-n " onclick="nmapCommand();">
+                                    <label class="form-check-label">No DNS Resolution (-n)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="discoveryOption" value="--traceroute " onclick="nmapCommand();">
+                                    <label class="form-check-label">Trace Hop Path (--traceroute)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Timing and Performance</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="timingOption" value="-T0 " onclick="nmapCommand();">
+                                    <label class="form-check-label">-T0 (slowest)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="timingOption" value="-T1 " onclick="nmapCommand();">
+                                    <label class="form-check-label">-T1</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="timingOption" value="-T2 " onclick="nmapCommand();">
+                                    <label class="form-check-label">-T2</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="timingOption" value="-T3 " onclick="nmapCommand();" checked>
+                                    <label class="form-check-label">-T3</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="timingOption" value="-T4 " onclick="nmapCommand();">
+                                    <label class="form-check-label">-T4</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="timingOption" value="-T5 " onclick="nmapCommand();">
+                                    <label class="form-check-label">-T5 (fastest)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">OS, Service, and Version</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="osOption" value="-sV " onclick="nmapCommand();" checked>
+                                    <label class="form-check-label">Detect Services (-sV)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="osOption" value="-O " onclick="nmapCommand();">
+                                    <label class="form-check-label">Detect OS (-O)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="osOption" value="-A " onclick="nmapCommand();">
+                                    <label class="form-check-label">Detect OS and Services (-A)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Other Options</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="otherOption" value="-v " onclick="nmapCommand();">
+                                    <label class="form-check-label">Verbose (-v)</input><br>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="otherOption" value="-r " onclick="nmapCommand();">
+                                    <label class="form-check-label">Non-randomized Scan Order (-r)</input><br>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Command</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="command" name="command" onkeypress="return false;" readonly></input>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Passphrase</label>
+                        <div class="col-sm-5">
+                            <input class="form-control" type="password" name="passphrase" id="passphrase" required></input>
+                        </div>
+                        <div class="col-sm-5">
+                            <button type="submit" id="valid" class="btn btn-large btn-primary contact-btn w-100 text-white contact_btn">SCAN IT</button>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">
+                        function validateForm() {
+                            // set the button to enabled by default
+                            document.getElementById('valid').disabled=false;
+                            var hosts = document.getElementById('host');
+                            var ports = document.getElementById('ports');
+                            var tports = document.getElementById('topPorts');
+                            // set defult backgrounds
+                            hosts.style = "background-color: fff;";
+                            ports.style = "background-color: fff;";
+                            // check if the field "hosts" is non-empty, is mached with
+                            // hosts or IPs
+                            if (hosts.value == "" || /^[\da-zA-Z,.-\/:]+$/.test(hosts.value) == false) {
+                                console.log("Invalid host: " + hosts);
+                                document.getElementById('valid').disabled=true;
+                                // change the background color of the field
+                                hosts.style = "background-color: #f8d7da; color: #721c24;";
+
+                                return false;
+                            }
+                            // check if the field "ports" is non-empty, is mached with
+                            // acceptable format; read more: https://regex101.com/r/CuBgCZ/1
+                            if (ports.value != "") {
+                                document.getElementById('topPorts').disabled=true;
+                            	document.getElementById('ports').disabled=false;
+                            	
+                            	if (/^([\d-]+|\,[\d]+)+$/.test(ports.value) == false) {
+                                	console.log("Invalid port (-p): " + ports);
+                                    document.getElementById('valid').disabled=true;
+                                    // change the background color of the field
+                                    ports.style = "background-color: #f8d7da; color: #721c24;";
+                                    return false;
+                                }
+                            }
+                            if (tports.value != "") {
+                                document.getElementById('topPorts').disabled=false;
+                            	document.getElementById('ports').disabled=true;
+                            	
+                            	if (/^\d+$/.test(topPorts.value) == false) {
+                                	console.log("Invalid port (--top-ports): " + topPorts);
+                                    document.getElementById('valid').disabled=true;
+                                    // change the background color of the field
+                                    topPorts.style = "background-color: #f8d7da; color: #721c24;";
+                                    return false;
+                                }
+                            }
+                            if (tports.value == "" && ports.value == "") {
+                                document.getElementById('topPorts').disabled=false;
+                            	document.getElementById('ports').disabled=false;
+                            }
+                            return true;
+                        }
+                        function nmapCommand() {
+                            var discoveryOptions = '';
+                            var otherOptions = '';
+                            var inputCommand = document.getElementById('command');
+                            // get the value of the selected/typed fields
+                            var scanOptions = document.querySelector('input[name="scanOption"]:checked').value;
+                            var timingOptions = document.querySelector('input[name="timingOption"]:checked').value;
+                            var osOptions = document.querySelector('input[name="osOption"]:checked').value;
+                            var hosts = document.getElementById('host').value;
+                            var ports = (document.getElementById('ports').value) ? "-p " + (document.getElementById('ports').value) + " " : ((document.getElementById('topPorts').value) ? "--top-ports " + (document.getElementById('topPorts').value) + " " : "");
+                            var discoveryOptions_ = document.querySelectorAll('input[name="discoveryOption"]:checked');
+                            if (discoveryOptions_) {
+                                for (var cb1 of discoveryOptions_) {
+                                    discoveryOptions += cb1.value;
+                                }
+                            }
+                            var otherOptions_ = document.querySelectorAll('input[name="otherOption"]:checked');
+                            if (otherOptions_) {
+                                for (var cb2 of otherOptions_) {
+                                    otherOptions += cb2.value;
+                                }
+                            }
+                            // form the command
+                            var command = "nmap " + scanOptions;
+                            command += discoveryOptions + timingOptions + osOptions;
+                            command += otherOptions + ports + hosts;
+                            // write the command
+                            inputCommand.value = command;
+                            // check the output of the function validateForm
+                            // and act accordingly
+                            if (!validateForm()) {
+                                inputCommand.style = "background-color: #f8d7da; color: #721c24;";
+                            }
+                            else {
+                                inputCommand.style = "background-color: rgba(59, 59, 59, 0.3);";
+                                // write the value on console
+                                console.log(command)
+                            }
+                        }
+                    </script>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

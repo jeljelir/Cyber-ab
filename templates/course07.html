@@ -1,0 +1,215 @@
+{% extends 'base-course.html' %}
+{% block title %} Course 07: Exploitation {% endblock %}
+{% block courseNumber %}07{% endblock %}
+{% block form1 %}Decode your flag: SSBhbSB0aGUgZmxhZw=={% endblock %}
+{% block formHint %}Do you know what encoiding algorithm is used? If not, find it out <a href="https://www.boxentriq.com/code-breaking/cipher-identifier" target="_blank">here</a>. If so, use tools like <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a> as a help.{% endblock %}
+
+{% block courseContent %}
+    <section id="detail-content" class="detail-content">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm-12 col-lg-3 left-menu">
+                    <div class="bg-blue-color">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="course-deatail-img p-3 bg-white-color">
+                                     <img src="{{ url_for('static', filename='img/0.png') }}" alt="Exploitation">
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white text-center">Exploitation</h1>
+                                <p class="text-white text-justify pb-3">Exploitation is a tool or script that allows hackers to exploit a system's weaknesses. Hackers uncover vulnerabilities using Nessus, Nexpose, OpenVAS, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-color pb-4">
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white">All Courses</h1>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course01') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                        <span class="sub-heading text-white">01. Introduction</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course02') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course03') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                        <span class="sub-heading text-white">03. Social Engineering</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course04') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course05') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course06') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                        <span class="sub-heading text-white">06. Password Cracking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 active">
+                                    <a href="{{ url_for('course07') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                        <span class="sub-heading text-white">07. Exploitation</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course08') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                        <span class="sub-heading text-white">08. Email Hijacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course09') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course10') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                        <span class="sub-heading text-white">10. Final Assessment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-9">
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                        <div class="col-12">
+                            <h1 class="main-heading-detail green-color">Exploit<span class="blue-color">ation</span></h1>
+                            <p class="sub-heading margin-sub-heading text-black">Exploitation is a tool or script that allows hackers to exploit a system's weaknesses. Hackers uncover vulnerabilities using Nessus, Nexpose, OpenVAS, etc.</p>
+                            <p class="sub-heading margin-sub-heading text-black">Two kinds of exploits exist:</p>
+                            <ul>
+                                <li><strong>Remote Exploits:</strong>These exploits involve a remote system or network. Distant exploits let hackers access remote systems.</li>
+                                <li><strong>Local Exploits:</strong>are utilized by a local system user who wishes to exceed his permissions.</li>
+                            </ul>
+                            <p class="sub-heading margin-sub-heading text-black">An attacker or pentester might exploit a flaw or vulnerability to produce undesirable or unexpected behavior, such as gaining control of the target system, escalating privileges, launching a denial-of-service attack, or stealing sensitive data.</p>
+                        </div>
+                    </div>
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-5">
+                        <div class="col-12">
+                        <h1 class="main-heading-detail green-color">Course<span class="blue-color"> Curriculum</span></h1>
+                        <section class="accordion" role="tabpanel" aria-live="polite" data-behavior="accordion">
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Exploitation Types
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black"><strong>Payload:</strong> a pice of code that remotely execute.</p>
+                                        <p class="text-black"><strong>Shellcode:</strong> Small bit of script used as the payload; often opens a command shell where the adversary may manage the compromised computer. Since penetration testing can identify simple shellcodes being transmitted over the network, they are commonly encoded to prevent detection.</p>
+                                        <p class="text-black"><strong>Bind shell:</strong> Bind shells aggressively wait for connections on a certain port when executed. This port gives the attacker shell access.</p>
+                                        <p class="text-black"><strong>Reverse shells:</strong> A reverse shell, sometimes called a remote shell or "connect-back shell," exploits the target system's vulnerabilities to access the victim's computer. Connect to a distant computer and redirect the target system's input and output connections so the attacker may access it remotely.</p>
+                                        <p class="text-black"><strong>Pivoting:</strong> Metasploit uses pivoting to shift communication from a compromised machine to other, inaccessible networks.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/IJ4M2DDMjgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                DDoS
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">A DDoS attack overloads an internet service or website with traffic from various sources to render it inaccessible. A DDoS assault employs multiple computers and Internet connections, frequently spread internationally in a botnet, to overwhelm a targeted site with packets. A volumetric DDoS assault may create tens or hundreds of Gigabits per second. Your typical network can't manage such load, we're sure.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black">Types of DDos</p>
+                                        <p class="text-black"><strong>Volume-based Attacks:</strong> Volume-based assaults include TCP/UDP/ICMP/spoofedpacket floods. Layer 3&amp;4 Attacks. An attacker attempts to overwhelm the target's bandwidth. Bits per Second measure assault magnitude.</p>
+                                        <p class="text-black"><strong>Protocol Attacks:</strong> A protocol attack may involve SYN flooding, Ping of Death attacks, fragmented traffic attacks, Smurf DDoS, and more. Server resources, as well as those of firewalls and load balancers, are depleted in this kind of assault. Packets per Second (PPS) is the unit of attack magnitude.</p>
+                                        <p class="text-black"><strong>Application Layer Attacks:</strong> gAttacks on the Application Layer include Slowloris, Zero-day DDoS, DDoS attacks targeting Apache and Windows or OpenBSD vulnerabilities, and others. Web servers are the target of this attack. Requests per Second (RPS) are used to quantify the severity of an assault.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Um3ZIaqpkW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                SQL Injection
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">It is possible to include SQL commands into URL strings or data structures to get a desired answer from the data that are linked to online applications. Typically, this form of attack occurs on websites built with PHP or ASP.NET.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black">How could be done</p>
+                                        <ul>
+                                            <li> To completely remove a system's database, one must do a full database dump.</li>
+                                            <li> To make changes to the databases' content.</li>
+                                            <li> To check that are not permitted by the application.</li>
+                                        </ul>
+                                        <p class="text-black">When an application doesn't adequately check the inputs before delivering them to a SQL query, this sort of attack is possible. There are a number of places where injections may be found. You may check whether a SQL injection attack is possible by inserting the "'" character into a string and seeing if an error occurs.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/cx6Xs3F_1Uc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+                           
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab: LFI vulnerability Exploitation
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">Enter the following command in your Linux terminal to get the tool</p>
+                                        <pre>git clone https://github.com/mzfr/liffy.git</pre>
+                                        <p class="text-black">Then we run the tool with the following command.</p>
+                                        <pre>cd liffy.git</pre>
+                                        <p class="text-black">Now run Liffy using Python</p>
+                                        <pre>python liffy.py</pre>
+                                        <p class="text-black">You will see the guide switches in the output, you can use these switches to scan your desired site and find the LFI vulnerability, for example, pay attention to the following command</p>
+                                        <pre>python liffy.py –url http://site.com/lfi-google.php?file= –filter</pre>
+                                        <p class="text-black">Using the -url switch, we have introduced the vulnerable site's input, and with the -filter switch, we will be able to read the file. There are various switches, some of which we will introduce:</p>
+                                        <ul>
+                                            <li>expect, input, data: to execute the command</li>
+                                            <li>filter: reading files</li>
+                                            <li>cookies: cookie and session change</li>
+                                            <li>location: the address of the files</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title"  role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Quiz
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfU5OzuF5f_iqxyltx7rMwdIgoqD4ng3h4tLsIwI0ZztaLXXQ/viewform?embedded=true" width="640" height="4155" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,227 @@
+{% extends 'base-course.html' %}
+{% block title %} Course 06: Password Cracking {% endblock %}
+{% block courseNumber %}06{% endblock %}
+{% block form1 %}What is a vulnerability in a system or device that has been disclosed but is not yet patched?{% endblock %}
+{% block formHint %}Just review the contents of the previous course.{% endblock %}
+
+{% block courseContent %}
+    <section id="detail-content" class="detail-content">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm-12 col-lg-3 left-menu">
+                    <div class="bg-blue-color">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="course-deatail-img p-3 bg-white-color">
+                                     <img src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white text-center">Password Cracking</h1>
+                                <p class="text-white text-justify pb-3">Passwords unlock a system or account. People usually use easy-to-remember passwords like their birthdays, family members' names, cellphone numbers, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-color pb-4">
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white">All Courses</h1>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course01') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                        <span class="sub-heading text-white">01. Introduction</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course02') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 ">
+                                    <a href="{{ url_for('course03') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                        <span class="sub-heading text-white">03. Social Engineering</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course04') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course05') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 active">
+                                    <a href="{{ url_for('course06') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                        <span class="sub-heading text-white">06. Password Cracking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course07') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                        <span class="sub-heading text-white">07. Exploitation</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course08') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                        <span class="sub-heading text-white">08. Email Hijacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course09') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course10') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                        <span class="sub-heading text-white">10. Final Assessment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-9">
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                        <div class="col-12">
+                            <h1 class="main-heading-detail green-color">Password<span class="blue-color"> Cracking</span></h1>
+
+                            <div class="accordion__content-inner">
+                                <p class="text-black">Emails, databases, computer systems, servers, bank accounts, and almost everything else have passwords. Passwords unlock a system or account. People usually use easy-to-remember passwords like their birthdays, family members' names, cellphone numbers, etc. This makes passwords weak and hackable. Strong passwords protect accounts from hackers.</p>
+                                <p class="text-black">Strong passwords are:</p>
+                                <ul>
+                                    <li>8-character minimum</li>
+                                    <li>Letters, numerals, and symbols</li>
+                                    <li>Mixed-case letters</li>
+                                </ul>
+                                <p class="text-black">&nbsp;</p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/UrbRpoLqF18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <p class="text-black">&nbsp;</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-5">
+                        <div class="col-12">
+                        <h1 class="main-heading-detail green-color">Course<span class="blue-color"> Curriculum</span></h1>
+                        <section class="accordion" role="tabpanel" aria-live="polite" data-behavior="accordion">
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                    Attack Types
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black"><strong>Online Password attacks:</strong> Online password attacks are common against online apps, unprotected SSH terminals, and any login interface. An online password attack involves trying several username/password combinations to guess the correct password.</p>
+                                        <p class="text-black"><strong>Offline Password attacks:</strong> Hashed credentials from a hacked system may be attacked offline. This is done by extracting the target system's hashes and breaking them locally. You won't scare the target if you don't associate with them.</p>
+                                        <p class="text-black"><strong>Dictionary attacks:</strong> Dictionary attacks involve a database of semi-common passwords and hashes. A dictionary attack may match a scrambled Facebook hash to one in its database. The same may be true.</p>
+                                        <p class="text-black"><strong>Brute-Force attacks:</strong> Brute-force approaches try every character combination. Brute-force password convert millions of passwords into hashes and compare to password hashes.</p>
+                                        <p class="text-black"><strong>Rainbow table attacks:</strong> Rainbow table eliminates need to store millions of password-hash combinations. Rainbow tables remember recent hashes to retrieve the whole string, reducing volume and making password-hash combinations easier to find.</p>
+                                        <p class="text-black"><strong>Social engineering:</strong> Social engineering involves obtaining sensitive information. Programmers know which emails people open carelessly. If you receive an email about a security problem with your account, don't press on an interface and input your password or other details.</p>
+                                        <p class="text-black"><strong>Phishing:</strong> Phishing is a social engineering technique used by hackers to capture customers and steal their sensitive data for financial and information theft. Mail spoofing, URL spoofing, website spoofing, smishing, vishing, and more are types of phishing. Mail, phone, and SMS are widespread. In either of these types, the perpetrator disguises as someone from a legitimate institution and attempts to hoodwink the victims into giving sensitive information such as proof data, financial and account details, passwords, and more.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/NDMSLtx5Kwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                    Tools
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black"><strong>Hydra:</strong> is a dictionary attack tool. In the next example, we utilize Hydra to retrieve an FTP password.</p>
+                                        <p class="text-black"><strong>John the Ripper:</strong> is a strong brute-force attack tool supplied with the Kali Linux distribution.</p>
+                                        <p class="text-black"><strong>Crunch:</strong> generates wordlists using a standard or custom character set. Crunch generates all conceivable combinations. Kali Linux includes this utility.</p>
+                                        <p class="text-black"><strong>Rainbow table:</strong> Rainbow tables store hashed passwords. It's a lookup table used to decipher passwords. Password recovery relies on a pre-calculated hash table. http://project-rainbowcrack.com/table.htm has the tables. RainbowCrack 1.6.1 uses rainbow tables. Kali has it again.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/z4_oqTZJqCo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab 1: Password Strength and Breach Check
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            There are many tools can help you with password strength and check you email on public data breaches. The most well-known service is <a href="https://haveibeenpwned.com/" target="_blank">';--have i been pwned?</a>
+                                        </p>
+                                        <p class="text-black">
+                                            First check your email(s) to see if your are pwned!
+                                            <img src="/static/img/courses/06-01.png">
+                                        </p>
+                                        <p class="text-black">
+                                            You can also check for the leakage of passwords. Here, you can see the leakage of <code>password</code> with 9545824 times appearances.
+                                            <img src="/static/img/courses/06-02.png">
+                                        </p>
+                                        <p class="text-black">
+                                            And finally, you can get notified if your email appeared in any data breachs.
+                                            <img src="/static/img/courses/06-03.png">
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab 2: Password Brute-Force with Hydra
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            Hydra is a parallelized password cracker that can attack a variety of protocols. It is extremely fast and adaptable, and new modules can be easily added. This tool allows researchers and security consultants to demonstrate how simple it would be to gain unauthorized remote access to a system.
+                                        </p>
+                                        <p class="text-black">
+                                            First, let's download the <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt" target="_blank">Rockyou.txt wordlist</a>
+                                            <img src="/static/img/courses/06-01.png">
+                                        </p>
+                                        <p class="text-black">
+                                            Now, let's see if we can access <code>https://is.theorizeit.org/auth/</code> for the username <code>istheory</code>.
+                                            <img src="/static/img/courses/06-04.png">
+                                        </p>
+                                        <p class="text-black">
+                                            Just run the following command to brute-force the password using the provided word list.
+                                            <pre>hydra -V -l istheory -P ./wordlists/rockyou.txt https-get://is.theorizeit.org/auth/</pre>
+                                            <img src="/static/img/courses/06-05.png">
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title"  role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Quiz
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdkojdoNSdjrRpnzzxJwTTpX2stDJW7KspaLI5zI-OHJkqQdw/viewform?embedded=true" width="640" height="2887" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

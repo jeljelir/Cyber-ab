@@ -1,0 +1,176 @@
+{% extends 'base-course.html' %}
+{% block title %} Course 08: Email Hijacking {% endblock %}
+{% block courseNumber %}08{% endblock %}
+{% block form1 %}What is the IP address of scanme.nmap.org?{% endblock %}
+{% block formHint %}Do not always think of difficult solutions. Just "ping" it; how? Read <a href="https://basicwebguide.com/how-to-ping-a-website-in-cmd/" target="_blank">here</a>{% endblock %}
+
+{% block courseContent %}
+    <section id="detail-content" class="detail-content">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm-12 col-lg-3 left-menu">
+                    <div class="bg-blue-color">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="course-deatail-img p-3 bg-white-color">
+                                     <img src="{{ url_for('static', filename='img/08.png') }}" alt="IEmail Hijacking">
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white text-center">Email Hijacking</h1>
+                                <p class="text-white text-justify pb-3">Nowadays, email hijacking, or email hacking, has become a common problem. Email spoofing, social engineering tools, and computer virus injection are all methods used to carry out this attack.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-color pb-4">
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white">All Courses</h1>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course01') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                        <span class="sub-heading text-white">01. Introduction</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course02') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course03') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                        <span class="sub-heading text-white">03. Social Engineering</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course04') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course05') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course06') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                        <span class="sub-heading text-white">06. Password Cracking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course07') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                        <span class="sub-heading text-white">07. Exploitation</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 active">
+                                    <a href="{{ url_for('course08') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                        <span class="sub-heading text-white">08. Email Hijacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course09') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course10') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                        <span class="sub-heading text-white">10. Final Assessment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-9">
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                        <div class="col-12">
+                            <h1 class="main-heading-detail green-color">Email<span class="blue-color"> Hijacking</span></h1>
+
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q7RMd5dI454" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <p class="sub-heading margin-sub-heading text-black">Nowadays, email hijacking, or email hacking, has become a common problem. Email spoofing, social engineering tools, and computer virus injection are all methods used to carry out this attack.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>spoofing email</strong></p>
+                            <p class="sub-heading margin-sub-heading text-black">Using email spoofing, spammers send emails that seem to come from a well-known domain, causing the recipient to open the message. Typically, strange links, shaky content, and solicitations to transfer money are included in these emails.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Social Engineering</strong></p>
+                            <p class="sub-heading margin-sub-heading text-black">Spammers send advertisements to a variety of recipients, promising substantial savings in exchange for the recipients' personal information. In Kali, there are tools that can let you hijack an email account. Phishing tactics may also be used to attack email accounts. A link in an email may lead to the installation of malware on the user's computer or to a malicious website that asks for personal and financial information such passwords, account IDs, or credit card numbers, which can then be used to commit identity theft. Because phishing assaults are simpler to conduct than attempting to break into a computer's defenses, they are often used by cybercriminals.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Sent Viruses in a User device</strong></p>
+                            <p class="sub-heading margin-sub-heading text-black">The third method a hacker might use to get access to your email account is to infect your computer with a virus or other malicious program. Hackers may steal your credentials with the assistance of a virus.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>How to detect email hijacking?</strong></p>
+                            <ul></ul>
+                                <li> Included among the recipients of spam email are a substantial percentage of folks you know.</li>
+                                <li> Your password no longer works.</li>
+                                <li> You click "Forgot Password" and no email is sent.</li>
+                                <li> Sent Items includes spam you didn't send.</li>
+                            </ul>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/mJyt1e_h6gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-5">
+                        <div class="col-12">
+                        <h1 class="main-heading-detail green-color">Course<span class="blue-color"> Curriculum</span></h1>
+                        <section class="accordion" role="tabpanel" aria-live="polite" data-behavior="accordion">
+                            
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab: Hacking Gmail with Termux
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">Type the following commands in order to hack Gmail.</p>
+                                        <p class="text-black">Then you install the tool with the following GitHub link</p>
+                                        <pre>git clone https://github.com/AyoubSirai/gmail_attacker.git</pre>
+                                        <p class="text-black">Then we run the tool with the following command.</p>
+                                        <pre>cd gmail_attacker</pre>
+                                        <p class="text-black">Now we need to have a strong password list for hacking Gmail with Termux. There are two ways, either we can use a pre-made password list or we can create it, I will say both.</p>
+                                        <p class="text-black">Premade ===> Download the password file from open-sources, change its name to <coed>pass.txt</coed>, then copy it to the first page of the internal memory, then type the following code.</p>
+                                        <pre>cp -r /storage/emulated/0/pass.txt /$HOME/gmail_attacker</pre>
+                                        <p class="text-black">The second method of creating a password list, type the following command.</p>
+                                        <pre>wordlist -m 4 -M 6 -o pass.txt -v 1234567890</pre>
+                                        <ul>
+                                            <li>The value of m is the minimum length of a password</li>
+                                            <li>The M value is the maximum length of a password</li>
+                                            <li>We also set the value o- for the password file name</li>
+                                            <li>The value of v- means that the passwords should include what characters we have entered numbers 0 to 9</li>
+                                        </ul>
+                                        <p class="text-black">Now we call the file with the following command.</p>
+                                        <pre>python3 gmail_attacker.py</pre>
+                                        <p class="text-black">Then we enter the number 1 and I enter the name of the password of the list we have in this way: <code>pass.txt</code></p>
+                                        <p class="text-black">In the next part, it asks us for the Gmail address that we want to hack.</p>
+                                        <p class="text-black">Enter the Gmail address and then wait for it to read the password list and start by itself.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title"  role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Quiz
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfuCw79dIt-2ZTbYLnn7_4MaXOGtbFilbJSGKPDx4aK0YaWZQ/viewform?embedded=true" width="640" height="2649" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

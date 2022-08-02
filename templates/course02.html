@@ -1,0 +1,251 @@
+<!-- [[Easy_Flag]] -->
+{% extends 'base-course.html' %}
+{% block title %} Course 02: Passive Reconnaissance {% endblock %}
+{% block courseNumber %}02{% endblock %}
+{% block form1 %}Find a flag in the page; it should be something like <i>[[THE_FLAG]]</i>.{% endblock %}
+{% block formHint %}Have you ever checked source codes? There might be something worthy.{% endblock %}
+
+{% block courseContent %}
+    <section id="detail-content" class="detail-content">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm-12 col-lg-3 left-menu">
+                    <div class="bg-blue-color">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="course-deatail-img p-3 bg-white-color">
+                                     <img src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white text-center">Passive Reconnaissance</h1>
+                                <p class="text-white text-justify pb-3">Ethical hacking begins with information gathering and target system knowledge.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-color pb-4">
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white">All Courses</h1>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course01') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                        <span class="sub-heading text-white">01. Introduction</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 active">
+                                    <a href="{{ url_for('course02') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 ">
+                                    <a href="{{ url_for('course03') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                        <span class="sub-heading text-white">03. Social Engineering</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course04') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course05') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course06') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                        <span class="sub-heading text-white">06. Password Cracking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course07') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                        <span class="sub-heading text-white">07. Exploitation</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course08') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                        <span class="sub-heading text-white">08. Email Hijacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course09') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course10') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                        <span class="sub-heading text-white">10. Final Assessment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-9">
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                        <div class="col-12">
+                            <h1 class="main-heading-detail green-color">Passive<span class="blue-color"> Reconnaissance</span></h1>
+                            <p class="sub-heading margin-sub-heading text-black">Ethical hacking begins with information gathering and target system knowledge. Reconnaissance uses Footprinting, Scanning, and Enumeration to locate and gather information about a target system.</p>
+                            <p class="sub-heading margin-sub-heading text-black">An ethical hacker gathers as much information as possible about a target system during reconnaissance.</p>
+                            <ul>
+                                <li>Collect data</li>
+                                <li>Network range</li>
+                                <li>Active machines</li>
+                                <li>Find ports and access points</li>
+                                <li>System fingerprinting</li>
+                                <li>Ports services</li>
+                                <li>Network-map</li>
+                            </ul>
+                            <p class="sub-heading margin-sub-heading text-black">Reconnaissance is active and passive. Reconnaissance is an information-gathering task. Both methods of reconnaissance are called passive assaults since they only gather information, not aggressively exploit the victim. Reconnaissance is generally the first step in exploiting a target system.</p>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2xtbu52tE_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Passive Reconnaissance:</strong> This procedure doesn't include a computer. This method gathers data without interfering with target systems.</p>
+                        </div>
+                    </div>
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-5">
+                        <div class="col-12">
+                        <h1 class="main-heading-detail green-color">Course<span class="blue-color"> Curriculum</span></h1>
+                        <section class="accordion" role="tabpanel" aria-live="polite" data-behavior="accordion">
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                    Metasploit
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">Metasploit is a strong exploit tool. To find out all you need to know about Metasploit, visit https://www.metasploit.com. You may choose between a commercial or free version. The two variants are almost identical. "Kali Distribution" contains the Metasploit community release and additional ethical hacking tools, which you will use as an Ethical Hacker. It's possible to run Metasploit on Linux, Windows, or Mac OS X as a stand-alone application.</p>
+                                        <p class="text-black">Metasploit Payloads</p>
+                                        <p class="text-black">To put it another way, hackers use scripts called "payload" to connect with a compromised system. They may deliver data to an user's system by using payloads.</p>
+                                        <p class="text-black">In terms of Metasploit payloads, there are three basic kinds:</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QynUOJanNqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                        <ul>
+                                            <li><strong>Singles:</strong> A single is a basic and simple way to begin a conversation and then go to the next level of the relationship. Creating a user, for example, is an example.</li>
+                                            <li><strong>Staged:</strong>In order for an attacker to upload a large file onto a victim's computer, they must first stage the assault.</li>
+                                            <li><strong>Stages:</strong>modules that download the payload components known as stages. Meterpreter and VNC Injection are only two examples of the extensive functionalities available via the different payload stages.</li>
+                                        </ul>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/K7y_-JtpZ7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab 1: Whois
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            Passive recon entails gathering information about the target from sources other than the target itself. Passive recon can be aided by these helpful resources.
+                                        </p>
+                                        <p class="text-black">
+                                            <code>Whois</code> employs the RFC 3912 query and answer protocol to search for an object in a database. When a privacy service is used, we can sometimes get "incorrect" information, such as contact information, registrar information, registration date and expiration date, as well as contact email addresses.
+                                        </p>
+                                        <p class="text-black">
+                                            <code>Whois</code> of Google will reveal the following information:
+                                        </p>
+                                        <pre>whois google.com</pre>
+                                        <img src="/static/img/courses/02-01.png">
+                                        <p class="text-black">
+                                            It provides some information about the target domain including:
+                                        </p>
+                                        <ul>
+                                            <li>When the domain target is registered</li>
+                                            <li>What is the registrar of the target domain</li>
+                                            <li>Which company is target using for name servers</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab 2: NSLookup / Dig
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            DNS servers can be queried using <code>nslookup</code> (Name Server Lookup) to determine the IP address associated with a domain name and other DNS data. The ability to pass arguments and use it in a non-interactive manner is available.
+                                        </p>
+                                        <p class="text-black">
+                                            The <code>-type</code> parameter can be used to specify the type of query. For <code>Dig</code> we do not use any parameter.
+                                        </p>
+                                        <pre>nslookup -type=A google.com
+## or using dig
+dig google.com A</pre>
+                                        <img src="/static/img/courses/02-02.png">
+                                        <p class="text-black">
+                                            It provides some information about the target domain including:
+                                        </p>
+                                        <ul>
+                                            <li>All DNS records including TXT, MX, A, AAA, etc.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab 3: DNSDumpster
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            In addition to providing important information, the tools above aren't geared for subdomain enumeration. Useful information and susceptible servers can be found in subdomains. Using <code>DNSDumpster.com</code>, you may look up subdomains and their associated IP addresses, and then try to pinpoint their exact location.
+                                        </p>
+                                        <img src="/static/img/courses/02-03.png">
+                                        <img src="/static/img/courses/02-04.png">
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab 4: Shodan
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">
+                                            <code>Shodan.io</code> is a tool we utilize to dig further into the networks we're interested in. Because we aren't connecting to the devices directly, Shodan acts as a search engine for their online presence and provides a wealth of data throughout our passive investigation.
+                                        </p>
+                                        <img src="/static/img/courses/02-05.png">
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Section3: Quiz
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeA_RfDNVsuG16RVMp0-0vKIDgn72oKXoJ6LyofZe7ON0BX7Q/viewform?embedded=true" width="640" height="2887" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

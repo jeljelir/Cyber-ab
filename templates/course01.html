@@ -1,0 +1,287 @@
+{% extends 'base-course.html' %}
+{% block title %} Course 01: Introduction {% endblock %}
+{% block courseNumber %}01{% endblock %}
+
+{% block courseContent %}
+    <section id="detail-content" class="detail-content">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm-12 col-lg-3 left-menu">
+                    <div class="bg-blue-color">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="course-deatail-img p-3 bg-white-color">
+                                     <img src="{{ url_for('static', filename='img/03.png') }}" alt="Introduction to Ethical Hacking">
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white text-center">Introduction</h1>
+                                <p class="text-white text-justify pb-3">Hacking has been part of computers for about 50 years and is a diverse field. First known hacking occurred in 1960 at MIT, where the word "hacker" was first invented.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-color pb-4">
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white">All Courses</h1>
+                                <div class="courses-list py-3 active">
+                                    <a href="{{ url_for('course01') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                        <span class="sub-heading text-white">01. Introduction</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course02') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course03') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                        <span class="sub-heading text-white">03. Social Engineering</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course04') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course05') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course06') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                        <span class="sub-heading text-white">06. Password Cracking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course07') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                        <span class="sub-heading text-white">07. Exploitation</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course08') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                        <span class="sub-heading text-white">08. Email Hijacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course09') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course10') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                        <span class="sub-heading text-white">10. Final Assessment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-9">
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                        <div class="col-12">
+                            <h1 class="main-heading-detail green-color">Ethical<span class="blue-color"> Hacking</span></h1>
+
+                            <p class="sub-heading margin-sub-heading text-black">Hacking has been part of computers for about 50 years and is a diverse field. First known hacking occurred in 1960 at MIT, where the word "hacker" was first invented.</p>
+                            <p class="sub-heading margin-sub-heading text-black">Hacking involves identifying and penetrating computer system or network entry points. Hackers gain illegal access to a computer system or network to damage it or steal sensitive data.</p>
+                            <p class="sub-heading margin-sub-heading text-black">Hacking is allowed if done to test a computer or network's vulnerabilities. This is Ethical Hacking.</p>
+                            <p class="sub-heading margin-sub-heading text-black">"Hacker" is a computer hacker. Hackers endeavor to learn how systems work and are constructed, then manipulate them.</p>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/XLvPpirlmEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Hacking Type:</strong>Based on what's hacked, we can categorize hacking. Examples: Hacking a website implies gaining illegal access to a web server's databases and interfaces. Hacking a network involves utilizing tools like Telnet, NS search, Ping, Tracert, Netstat, etc. to acquire information about a network in order to impair its functioning. Email hacking involves unlawful access to and use of a user's email account. Ethical hacking includes testing and fixing computer or network flaws. Password hacking is retrieving secret passwords from computer data. Hacking is the process of acquiring a computer's ID and password through hacking techniques.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Hacking benefits:</strong>In certain situations, hacking is useful: To retrieve deleted information, notably passwords Strengthen computer and network security using penetration testing. To implement security precautions. To protect a computer against hackers.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Hacking disadvantages:</strong>Malicious hacking is hazardous. Massive security breach, Unauthorized data access, Trespassing, System malfunctioning, DoS assaults and Cyberattack.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Hacking's purpose:</strong>Hacking may have good and harmful aims. Here are several hacking motives. Idle, Show-off, Information theft, System-damaging, Privacy intrusion, Theft, System testing and Policy-breaking.</p>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-5">
+                        <div class="col-12">
+                        <h1 class="main-heading-detail green-color">Course<span class="blue-color"> Curriculum</span></h1>
+                        <section class="accordion" role="tabpanel" aria-live="polite" data-behavior="accordion">
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Hacker Types
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        
+                                        <p class="text-black">Based on their aim, hackers might be white hat, black hat, or grey hat. The evil character in Spaghetti Westerns wears a black cowboy hat and the good man a white one.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CHb9iSKV_dI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black"><strong>Good hackers:</strong> Ethical hackers are White Hats. As part of penetration testing and vulnerability assessments, they never intend to damage a system. Ethical hacking is legal and a difficult IT profession. Many firms use ethical hackers for penetration and vulnerability testing.</p>
+                                        <p class="text-black"><strong>Blackhat hackers:</strong> Black Hat hackers, sometimes called crackers, hack to impair a system's functionality or steal important data. Black Hat hacking is unlawful since it steals company data, violates privacy, damages the system, blocks network connection, etc.</p>
+                                        <p class="text-black"><strong>Grey Hats:</strong> Grey hat hackers combine black and white hats. They exploit a computer system or network's security hole without the owner's consent or knowledge. Their goal is to bring the owners' vulnerability to light and obtain recognition or a reward.</p>
+                                        <p class="text-black"><strong>Diverse Hackers:</strong> Other sorts of hackers are depending on what they hack and how they do it.</p>
+                                        <p class="text-black"><strong>Hackers Red Hat:</strong> Red hat hackers combine black and white hats. They hack government institutions, top-secret information centers, and anything important.</p>
+                                        <p class="text-black"><strong>Blue-hat hackers:</strong> Blue-hat hackers are employed to bug-test a system before its launch. They aim to close exploitable loopholes. Microsoft's security briefings are called BlueHat.</p>
+                                        <p class="text-black"><strong>Hackers:</strong> This describes the most competent hackers. These hackers share exploits.</p>
+                                        <p class="text-black"><strong>KiddieScript</strong><strong>:</strong> A script kiddie is a non-expert who hacks into computer systems using pre-packaged automated tools provided by others.</p>
+                                        <p class="text-black"><strong>Neophyte:</strong> A novice, "n00b," "newbie," or "Green Hat Hacker" is someone new to hacking and has little expertise of technology and hacking.</p>
+                                        <p class="text-black"><strong>Hacktivist:</strong> Hacktivists use technology to spread social, religious, or political messages. Most hacktivism includes defacement or DoS assaults.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Terminologies
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">The following is a glossary of essential terminology that are used in the world of hacking.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fNdrL1Os6LM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black"><strong>Adware:</strong> Adware displays pre-selected advertising on your computer.</p>
+                                        <p class="text-black"><strong>Attack:</strong> An attack is a way to gain access to a system and steal sensitive data.</p>
+                                        <p class="text-black"><strong>Back door:</strong> A back door, or trap door, bypasses security mechanisms like logins and passwords.</p>
+                                        <p class="text-black"><strong>Bot:</strong> A bot is a software that automates an activity so it can be performed more quickly and for longer than a person could. Sending HTTP, FTP, or Telnet faster or running script to generate objects faster.</p>
+                                        <p class="text-black"><strong>Botnet:</strong> Botnet is a set of computers managed without their owners' knowledge. Botnets transmit spam and launch DoS attacks.</p>
+                                        <p class="text-black"><strong>Brute force attack:</strong> Blue-hat hackers are employed to bug-test a system before its launch. They aim to close exploitable loopholes. Microsoft's security briefings are called BlueHat.A brute force assault is an automated and straightforward way to hack a system or website. It attempts usernames and passwords until it gets in.</p>
+                                        <p class="text-black"><strong>Buffer Overflow:</strong> Buffer Overflow happens when more data is pushed to a memory block than the buffer can retain.</p>
+                                        <p class="text-black"><strong>Clone phishing:</strong> Clone phishing modifies a real email with a bogus link to steal personal information.</p>
+                                        <p class="text-black"><strong>Cracker:</strong> A cracker changes software to access unwanted functionality, notably copy protection.</p>
+                                        <p class="text-black"><strong>Denial of service attack (DoS):</strong> A denial of service (DoS) attack is a malicious effort to make a server or network resource inaccessible to users by temporarily halting or suspending its functions.</p>
+                                        <p class="text-black"><strong>etc.</strong></p>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Tools
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">In this chapter, we'll explore renowned techniques used to prevent hacking and unauthorized computer or network access.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Fn4O1rumWrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black"><strong>NMAP:</strong> Network Mapper (Nmap) It's used for network discovery and security audits. Nmap was meant to scan big networks, however it can scan single hosts. Network administrators use it to manage inventories, upgrade schedules, and host/service uptime.</p>
+                                        <p class="text-black">Nmap analyzes IP packets to:</p>
+                                        <ul></ul>
+                                            <li> what hosts are on the network</li>
+                                            <li> what services they provide</li>
+                                            <li> what operating systems they operate on</li>
+                                            <li> what firewalls are used</li>
+                                            <li> etc.</li>
+                                        </ul>
+                                        <p class="text-black"><strong>Metasploit:</strong> Metasploit is an exploit tool. Rapid7's Metasploit is available at www.metasploit.com. It's commercial and free. Matasploit uses command prompt or Web UI.</p>
+                                        <p class="text-black">Metasploit lets you:</p>
+                                        <ul>    
+                                            <li> Small network penetration testing</li>
+                                            <li> Spot-check vulnerabilities' exploitability</li>
+                                            <li> Network scans or network discovery</li>
+                                            <li> Exploit modules and hosts</li>
+                                        </ul>
+                                        <p class="text-black"><strong>SuperScan</strong><strong>:</strong> SuperScan scans TCP ports and resolves hostnames for network managers. Its user-friendly UI lets you:</p>
+                                        <ul>    
+                                            <li> Ping and port-scan any IP range.</li>
+                                            <li> Scan built-in or supplied port ranges.</li>
+                                            <li> Check host replies.</li>
+                                            <li> Use the built-in editor to change port lists and descriptions.</li>
+                                            <li> Create new port lists by merging.</li>
+                                            <li> Connect to any open port.</li>
+                                            <li> Port-forward a bespoke helper app.</li>
+                                        </ul>
+                                        <p class="text-black"><strong>Stumbler:</strong> Windows WiFi scanner and monitor Network Stumbler. It can detect WLANs. It helps hackers and networking hobbyists locate non-broadcasting wireless networks. Network Stumbler checks a network's configuration, signal strength, coverage, and interference between wireless networks. Non-authorized connections may also be blocked.</p>
+                                        <p class="text-black"><strong>SSLLab</strong><strong>:</strong> This free internet service analyzes SSL web server configurations on the Internet.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Process
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">Ethical hacking has stages like any excellent endeavors. It helps hackers plan ethical hacking attacks. As a Certified Ethical Hacker, I can classify the ethical hacking process into six parts.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XIV9FkEjYNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black"><strong>Reconnaissance:</strong> The attacker obtains information about a target during reconnaissance. NMAP, Hping, Maltego, and Google Dorks are often utilized.</p>
+                                        <p class="text-black"><strong>Scanning:</strong> The attacker aggressively probes a target computer or network for exploitable flaws. Nessus, Nexpose, and NMAP are utilized.</p>
+                                        <p class="text-black"><strong>Accessibility:</strong> In this method, you try to exploit the system's weakness. Metasploit is used for this.</p>
+                                        <p class="text-black"><strong>Ensuring Continuity of Access:</strong> It's when a hacker gains system access. After getting access, the hacker installs backdoors to re-enter the system later. Metasploit is used.</p>
+                                        <p class="text-black"><strong>Tracking:</strong> This is unethical. It involves deleting hacking logs.</p>
+                                        <p class="text-black"><strong>Reporting:</strong> Reporting concludes ethical hacking. The Ethical Hacker creates a report including his findings, tools utilized, success rate, vulnerabilities detected, and exploit methods.</p>
+                                        <p class="text-black"><strong>Note:</strong> Unstandardized procedures. You may adapt methods and tools based on your techniques. If you receive the intended outcomes, the procedure is unimportant.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab: Introduction
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">You must complete two missions to learn Kali Linux.</p>
+                                        <p class="text-black">Before that you need to have a hacking work space. So, for that follow the first video.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/U7e-mcJdZok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black"><strong>Kali Linux</strong>
+                                        <p class="text-black">Debian-based Kali Linux has numerous of cybersecurity tools.</p>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Xhd7uh_keio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                        <ul>
+                                            <li> Kali Linux documentation is at <a href="https://www.kali.org/docs/">https://www.kali.org/docs/</a> <a href="https://www.kali.org/docs/"></a></li>
+                                            <li> Kali's tools. <a href="https://tools.kali.org/">https://tools.kali.org/</a> <a href="https://tools.kali.org/"></a></li>
+                                            <li> For anyone interested in Kali <a href="https://kali.training/lessons/introduction/">https://kali.training/lessons/introduction/</a> <a href="https://kali.training/lessons/introduction/"></a>You can also download it for offline use from <a href="https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf">https://kali.training/downloads/Kali</a><a href="https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf">-</a><a href="https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf">Linux</a><a href="https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf">-</a><a href="https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf">Revealed</a><a href="https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf">-</a><a href="https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf">1st</a><a href="https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf">-</a><a href="https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf">edition.pdf</a> <a href="https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf"></a></li>
+                                        </ul>
+                                        <p class="text-black"><strong>Linux commands</strong>
+                                        <p class="text-black">Practice on Linux fundamentals.</p>
+                                        <p class="text-black"><strong>Command line fundamentals”</strong>
+                                        <p class="text-black"><strong>Linux Administration”</strong>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/v_1zB2WNN14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                        <p class="text-black"><strong>Root password in Linux</strong>
+                                        <p class="text-black">&nbsp;</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MfJe-Xwuwc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="text-black">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title"  role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Quiz
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSes9Q161lrJI4e85AKoFClkQvDSFjUvkOhPOYFl6fQ1zePwhw/viewform?embedded=true" width="640" height="2720" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

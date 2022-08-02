@@ -1,0 +1,193 @@
+{% extends 'base-course.html' %}
+{% block title %} Course 09: Wireless Hacking {% endblock %}
+{% block courseNumber %}09{% endblock %}
+{% block form1 %}Can you solve this <a href="https://xss-game.appspot.com/level1" target="_blank"> CTF</a>?{% endblock %}
+{% block formHint %}No worries, you can go further by typing "yes" as the answer. However, think of using <code>&lt;script&gt;some code&lt;/script&gt;</code>{% endblock %}
+
+{% block courseContent %}
+    <section id="detail-content" class="detail-content">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm-12 col-lg-3 left-menu">
+                    <div class="bg-blue-color">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="course-deatail-img p-3 bg-white-color">
+                                     <img src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white text-center">Wireless Hacking</h1>
+                                <p class="text-white text-justify pb-3">A wireless network connects two or more devices using radio waves in a confined area. Wireless network devices may move while staying connected and sharing data.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-color pb-4">
+                        <div class="row pl-3 pr-3">
+                            <div class="col-12">
+                                <h1 class="main-heading text-white">All Courses</h1>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course01') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                        <span class="sub-heading text-white">01. Introduction</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course02') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course03') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                        <span class="sub-heading text-white">03. Social Engineering</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course04') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course05') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course06') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                        <span class="sub-heading text-white">06. Password Cracking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course07') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                        <span class="sub-heading text-white">07. Exploitation</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course08') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                        <span class="sub-heading text-white">08. Email Hijacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3 active">
+                                    <a href="{{ url_for('course09') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                    </a>
+                                </div>
+                                <div class="courses-list py-3">
+                                    <a href="{{ url_for('course10') }}">
+                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                        <span class="sub-heading text-white">10. Final Assessment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-9">
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
+                        <div class="col-12">
+                            <h1 class="main-heading-detail green-color">Wireless<span class="blue-color"> Hacking</span></h1>
+
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/QGzTCL1KkeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <p class="sub-heading margin-sub-heading text-black">A wireless network connects two or more devices using radio waves in a confined area. Wireless network devices may move while staying connected and sharing data. Their installation is inexpensive and rapid, which is why they're so popular.</p>
+                            <p class="sub-heading margin-sub-heading text-black">Wireless networks are popular and simple to install. IEEE 802.11 is used. Wireless routers link users to the Internet in wireless networks.</p>
+                            <p class="sub-heading margin-sub-heading text-black">Access Points extend wireless ranges and act as logical switches in wireless networks. Wireless networks are flexible yet insecure. A hacker can sniff network traffic remotely. Hackers may easily sniff wireless networks using radio waves.</p>
+                            <p class="sub-heading margin-sub-heading text-black">Most attackers employ network sniffing to identify a wireless network's SSID. In monitor mode, our wireless cards sniff.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Kismet:</strong>is a Kali distribution wireless sniffer tool. It's also available at https://www.kismetwireless.net.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>NetStumbler:</strong>NetStumbler is a Windows-only wireless hacking tool. http://www.stumbler.net/ has it. NetStumbler is straightforward to use.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Wired Equivalent Privacy:</strong>Wired Equivalent Privacy (WEP) secures and protects wireless networks. Data connection encryption prevents unwanted network access. Before transmission, the key encrypts packets. A packet integrity checker checks for changes after transmission.</p>
+                            <p class="sub-heading margin-sub-heading text-black">Some others</p>
+                            <ul>
+                                <li> WEPcrack</li>
+                                <li> Aircrack-ng</li>
+                            </ul>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LBHuOXJQtyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Wireless DoS Attacks:</strong>An attacker may assault a wireless network from a distance, making it harder to gather proof. The first form of DoS is Physical Attack. This form of assault is simple and may be caused via 2.4 GHz cordless phones.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>Network DoS Attack:</strong>Network DoS Attack is another. As the Wireless Access Point provides a shared medium, it allows traffic to overwhelm the AP, slowing its processing for clients trying to connect. Ping flood DoS attacks may cause such assaults.</p>
+                            <p class="sub-heading margin-sub-heading text-black"><strong>LOIC is another DoS tool.</strong></p>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/q7HkIwbj3CM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="sub-heading margin-sub-heading text-black">&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-5">
+                        <div class="col-12">
+                        <h1 class="main-heading-detail green-color">Course<span class="blue-color"> Curriculum</span></h1>
+                        <section class="accordion" role="tabpanel" aria-live="polite" data-behavior="accordion">
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title" role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Lab: COWPATTY
+                                </span>
+                                <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <p class="text-black">Find the COWPATTY utility</p>
+                                        <p class="text-black">This tool, which is used to hack the most secure security systems, is included by default in the Kali Linux software package. It is also interesting to know that this tool is located in the /usr/local/bin directory, so it can be launched from any folder in Kali Linux. To find it in Kali, run the following code:</p>
+                                        <pre>cd /usr/local/bin</pre>
+                                        <p class="text-black">Use the COWPATTY help page</p>
+                                        <p class="text-black">Just type cowpatty to find this tool. Then, Kali Linux will show you a small help page. Note that coWPAtty needs some data to work properly, including the following:</p>
+                                        <ul>
+                                            <li>Word list</li>
+                                            <li>File with password hash</li>
+                                            <li>Access point SSID for hacking</li>
+                                        </ul>
+                                        <img src="/static/img/courses/09-01.jpg">
+                                        <p class="text-black">Switch the wireless adapter to monitor mode</p>
+                                        <p class="text-black">Like other hacking tools, coWPAtty needs to change the Wi-Fi adapter to monitor mode to get the password, for this you can use the following code:</p>
+                                        <pre>airmon-ng start wlan0</pre>
+                                        <img src="/static/img/courses/09-02.jpg">
+                                        <p class="text-black">Create a trace file</p>
+                                        <p class="text-black">In this step, you need to create a file to store the intercepted password. For this purpose, use the following code:</p>
+                                        <pre>airodump-ng –bssid 00: 25: 9C: 97: 4F: 48 -c 9 -w cowpatty mon0</pre>
+                                        <p class="text-black">The above command dumps the selected access point (00:25:9C:97:4F:48), the specified channel (-c 9) and saves the hash to a file called cowcrack.</p>
+                                        <p class="text-black">Wait</p>
+                                        <p class="text-black">Now you just have to wait for someone to connect to the access point you modified, where you can intercept the hash. Use Airodump-ng to get notified when someone connects to the target network.</p>
+                                        <img src="/static/img/courses/09-03.jpg">
+                                        <p class="text-black">Run the coWPAtty tool</p>
+                                        <p class="text-black">After receiving the hashed password, we can use coWPAtty and decrypt the desired hash using our own word list. To do this, run the following code:</p>
+                                        <pre>cowpatty -f /pentest/passwords/wordlists/darkc0de.lst -r /root/cowcrack-01.cap -s Mandela2</pre>
+                                        <p class="text-black">coWPAtty creates a hash with the SSID for each word in the list and compares it to the intercepted hash. After the hash is matched, the coWPAtty tool will display the password of the access point on the screen.</p>
+                                        <img src="/static/img/courses/09-04.jpg">
+                                        <p class="text-black">Generate your hash</p>
+                                        <p class="text-black">Normally, coWPAtty uses a list of words provided by the user and calculates the hash of each one based on the specified SSID, although this consumes a lot of CPU resources. Fortunately, the tool now supports working with a ready-to-use hash file, which makes cracking WPA2-PSK passwords even more efficient. The following code can help you:</p>
+                                        <pre>genpmk -f /pentest/passwords/wordlists/darkc0de.lst -d hashes -s Mandela2</pre>
+                                        <p class="text-black">Use your hash</p>
+                                        <p class="text-black">After creating a list of hashes for a particular SSID, we can start cracking the password by running the following command:</p>
+                                        <pre>cowpatty -d hashfile -r dumpfile -s ssid</pre>
+                                        <p class="text-black">Using this tool, you can easily hack wpa2 psk wifi without complications.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+                                <span tabindex="0" class="accordion__title"  role="tabpanel" aria-expanded="false" data-binding="expand-accordion-trigger">
+                                Quiz
+                                </span>
+                                <div class="accordion__content" role="tabpanel" aria-hidden="true" data-binding="expand-accordion-container">
+                                    <div class="accordion__content-inner">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyv4E_CCusK2kCCnuGbJyAwM6SVD6S6frgnWyvO5TPiKwWeA/viewform?embedded=true" width="640" height="2281" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
