@@ -30,18 +30,44 @@ sudo ufw allow 'Nginx Full'
 sudo certbot --nginx -d domain.tld -d www.domain.tld
 ```
 
-## Run the App
+### Setup Ngnix for SSL and Redicrections
+Edit the `/etc/nginx/sites-enabled/domain.ltd` as follows.
 ```bash
-# Linux
+erver {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+
+    server_name  domain.ltd www.domain.ltd;
+    root   /path/to/webapp;
+
+    ssl_certificate /etc/letsencrypt/live/domain.ltd/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/domain.ltd/privkey.pem; # managed by Certbot
+
+    return 301 https://www.domain.ltd:5000$request_uri;
+    client_max_body_size 100M;
+
+    autoindex off;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name  domain.ltd www.domain.ltd;
+    return 301 https://www.domain.ltd:5000$request_uri;
+}
+```
+And finally check if Nginx is formatted correctly by 'sudo nginx -t'.
+
+## Run the App
+Setup some Flask variables for the first time. No need to do it every time.
+```bash
 export FLASK_APP=app.py
 export FLASK_ENV=development
 export FLASK_DEBUG=1
-
-# Windows
-$env:FLASK_APP = "app.py"
-$env:FLASK_ENV = development
-$env:LASK_DEBUG = 1
 ```
+
+And run the app. It should be run in the webapp folder.
 ```bash
 sudo gunicorn --certfile /etc/letsencrypt/live/domain.tld/fullchain.pem --keyfile /etc/letsencrypt/live/domain.tld/privkey.pem  --bind 0.0.0.0:5000 app:app
 ```
