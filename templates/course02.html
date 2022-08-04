@@ -2,99 +2,12 @@
 {% extends 'base-course.html' %}
 {% block title %} Course 02: Passive Reconnaissance {% endblock %}
 {% block courseNumber %}02{% endblock %}
-{% block form1 %}Find a flag in the page; it should be something like <i>[[THE_FLAG]]</i>.{% endblock %}
+{% block courseSubject %}Passive Reconnaissance{% endblock %}
+{% block courseDescription %}Ethical hacking begins with information gathering and target system knowledge.{% endblock %}
+{% block formQuestion %}Find a flag in the page; it should be something like <i>[[THE_FLAG]]</i>.{% endblock %}
 {% block formHint %}Have you ever checked source codes? There might be something worthy.{% endblock %}
 
 {% block courseContent %}
-    <section id="detail-content" class="detail-content">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-sm-12 col-lg-3 left-menu">
-                    <div class="bg-blue-color">
-                        <div class="row">
-                            <div class="col-12">
-                                 <div class="course-deatail-img p-3 bg-white-color">
-                                     <img src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
-                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="row pl-3 pr-3">
-                            <div class="col-12">
-                                <h1 class="main-heading text-white text-center">Passive Reconnaissance</h1>
-                                <p class="text-white text-justify pb-3">Ethical hacking begins with information gathering and target system knowledge.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-green-color pb-4">
-                        <div class="row pl-3 pr-3">
-                            <div class="col-12">
-                                <h1 class="main-heading text-white">All Courses</h1>
-                                <div class="courses-list py-3">
-                                    <a href="{{ url_for('course01') }}">
-                                        <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
-                                        <span class="sub-heading text-white">01. Introduction</span>
-                                    </a>
-                                </div>
-                                <div class="courses-list py-3 active">
-                                    <a href="{{ url_for('course02') }}">
-                                        <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
-                                        <span class="sub-heading text-white">02. Passive Reconnaissance</span>
-                                    </a>
-                                </div>
-                                <div class="courses-list py-3 ">
-                                    <a href="{{ url_for('course03') }}">
-                                        <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
-                                        <span class="sub-heading text-white">03. Social Engineering</span>
-                                    </a>
-                                </div>
-                                <div class="courses-list py-3">
-                                    <a href="{{ url_for('course04') }}">
-                                        <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
-                                        <span class="sub-heading text-white">04. Active Reconnaissance</span>
-                                    </a>
-                                </div>
-                                <div class="courses-list py-3">
-                                    <a href="{{ url_for('course05') }}">
-                                        <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
-                                        <span class="sub-heading text-white">05. Vulnerability Assessment</span>
-                                    </a>
-                                </div>
-                                <div class="courses-list py-3">
-                                    <a href="{{ url_for('course06') }}">
-                                        <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
-                                        <span class="sub-heading text-white">06. Password Cracking</span>
-                                    </a>
-                                </div>
-                                <div class="courses-list py-3">
-                                    <a href="{{ url_for('course07') }}">
-                                        <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
-                                        <span class="sub-heading text-white">07. Exploitation</span>
-                                    </a>
-                                </div>
-                                <div class="courses-list py-3">
-                                    <a href="{{ url_for('course08') }}">
-                                        <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
-                                        <span class="sub-heading text-white">08. Email Hijacking</span>
-                                    </a>
-                                </div>
-                                <div class="courses-list py-3">
-                                    <a href="{{ url_for('course09') }}">
-                                        <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
-                                        <span class="sub-heading text-white">09. Wireless Hacking</span>
-                                    </a>
-                                </div>
-                                <div class="courses-list py-3">
-                                    <a href="{{ url_for('course10') }}">
-                                        <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
-                                        <span class="sub-heading text-white">10. Final Assessment</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-9">
                     <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
                         <div class="col-12">
                             <h1 class="main-heading-detail green-color">Passive<span class="blue-color"> Reconnaissance</span></h1>
@@ -243,9 +156,4 @@ dig google.com A</pre>
 
                         </section>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 {% endblock %}
