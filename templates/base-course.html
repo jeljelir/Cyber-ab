@@ -23,11 +23,11 @@
                         <div class="row pl-sm-0 pr-sm-0 pl-lg-5 pr-lg-5 mt-4 mt-md-5 mt-lg-0">
                             <div class="col-2"></div>
                             <div class="col-8">
-                                <h1 class="main-heading-detail green-color">Unlock<span class="blue-color"> The Course</span></h1>
+                                <h1 class="main-heading-detail green-color">Unlock <span class="blue-color">{% block courseSubject %}{% endblock %}</span></h1>
                                 <p>To unlock the course, you need to solve a problem or capture the flag (CTF) implemented somewhere in the page or the server.</p>
                                 <h5>Here is the problem you need to solve:</h5>
                                 <p>
-                                    {{ self.form1() }}
+                                    {% block formQuestion %}{% endblock %}
                                 </p>
                                 <form method="post" name="formCTF" class="form-row">
                                     <div class="col-9">
@@ -58,11 +58,11 @@
                                 <div class="alert alert-info" role="alert">
                                     Hint: {% block formHint %}{% endblock %}
                                 </div>
-                                <h1 class="main-heading-detail green-color">Unlock<span class="blue-color"> The Course</span></h1>
+                                <h1 class="main-heading-detail green-color">Unlock <span class="blue-color">{% block courseSubject %}{% endblock %}</span></h1>
                                 <p>To unlock the course, you need to solve a problem or capture the flag (CTF) implemented somewhere in the page or the server.</p>
                                 <h5>Here is the problem you need to solve:</h5>
                                 <p>
-                                    {% block form1 %}{% endblock %}
+                                    {{ self.formQuestion() }}
                                 </p>
                                 <form method="post" name="formCTF" class="form-row">
                                     <div class="col-9">
@@ -80,6 +80,98 @@
             </div>
         </section>
     {% else %}
-        {% block courseContent %} {% endblock %}
+        <section id="detail-content" class="detail-content">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-sm-12 col-lg-3 left-menu">
+                        <div class="bg-blue-color">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="course-deatail-img p-3 bg-white-color">
+                                        <img src="{{ url_for('static', filename='img/{% block courseNumber %}{% endblock %}.png') }}" alt="{% block courseSubject %}{% endblock %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pl-3 pr-3">
+                                <div class="col-12">
+                                    <h1 class="main-heading text-white text-center">{% block courseSubject %}{% endblock %}</h1>
+                                    <p class="text-white text-justify pb-3">{% block courseDescription %}{% endblock %}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-green-color pb-4">
+                            <div class="row pl-3 pr-3">
+                                <div class="col-12">
+                                    <h1 class="main-heading text-white">All Courses</h1>
+                                    <div class="courses-list py-3 {% block activeCourse01 %}{% endblock %}">
+                                        <a href="{{ url_for('course01') }}">
+                                            <img class="img-course" src="{{ url_for('static', filename='img/01.png') }}" alt="Introduction to Ethical Hacking">
+                                            <span class="sub-heading text-white">01. Introduction</span>
+                                        </a>
+                                    </div>
+                                    <div class="courses-list py-3 {% block activeCourse02 %}{% endblock %}">
+                                        <a href="{{ url_for('course02') }}">
+                                            <img class="img-course" src="{{ url_for('static', filename='img/02.png') }}" alt="Passive Reconnaissance">
+                                            <span class="sub-heading text-white">02. Passive Reconnaissance</span>
+                                        </a>
+                                    </div>
+                                    <div class="courses-list py-3 {% block activeCourse03 %}{% endblock %} ">
+                                        <a href="{{ url_for('course03') }}">
+                                            <img class="img-course" src="{{ url_for('static', filename='img/03.png') }}" alt="Social Engineering">
+                                            <span class="sub-heading text-white">03. Social Engineering</span>
+                                        </a>
+                                    </div>
+                                    <div class="courses-list py-3 {% block activeCourse04 %}{% endblock %}">
+                                        <a href="{{ url_for('course04') }}">
+                                            <img class="img-course" src="{{ url_for('static', filename='img/04.png') }}" alt="Active Reconnaissance">
+                                            <span class="sub-heading text-white">04. Active Reconnaissance</span>
+                                        </a>
+                                    </div>
+                                    <div class="courses-list py-3 {% block activeCourse05 %}{% endblock %}">
+                                        <a href="{{ url_for('course05') }}">
+                                            <img class="img-course" src="{{ url_for('static', filename='img/05.png') }}" alt="Vulnerability Assessment">
+                                            <span class="sub-heading text-white">05. Vulnerability Assessment</span>
+                                        </a>
+                                    </div>
+                                    <div class="courses-list py-3 {% block activeCourse06 %}{% endblock %}">
+                                        <a href="{{ url_for('course06') }}">
+                                            <img class="img-course" src="{{ url_for('static', filename='img/06.png') }}" alt="Password Cracking">
+                                            <span class="sub-heading text-white">06. Password Cracking</span>
+                                        </a>
+                                    </div>
+                                    <div class="courses-list py-3 {% block activeCourse07 %}{% endblock %}">
+                                        <a href="{{ url_for('course07') }}">
+                                            <img class="img-course" src="{{ url_for('static', filename='img/07.png') }}" alt="Exploitation">
+                                            <span class="sub-heading text-white">07. Exploitation</span>
+                                        </a>
+                                    </div>
+                                    <div class="courses-list py-3 {% block activeCourse08 %}{% endblock %}">
+                                        <a href="{{ url_for('course08') }}">
+                                            <img class="img-course" src="{{ url_for('static', filename='img/08.png') }}" alt="Email Hijacking">
+                                            <span class="sub-heading text-white">08. Email Hijacking</span>
+                                        </a>
+                                    </div>
+                                    <div class="courses-list py-3 {% block activeCourse09 %}{% endblock %}">
+                                        <a href="{{ url_for('course09') }}">
+                                            <img class="img-course" src="{{ url_for('static', filename='img/09.png') }}" alt="Wireless Hacking">
+                                            <span class="sub-heading text-white">09. Wireless Hacking</span>
+                                        </a>
+                                    </div>
+                                    <div class="courses-list py-3 {% block activeCourse10 %}{% endblock %}">
+                                        <a href="{{ url_for('course10') }}">
+                                            <img class="img-course" src="{{ url_for('static', filename='img/10.png') }}" alt="Assessment">
+                                            <span class="sub-heading text-white">10. Final Assessment</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-9">
+                        {% block courseContent %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </section>
     {% endif %}
 {% endblock %}
