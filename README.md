@@ -69,7 +69,7 @@ To be able to clone CyberLab from its Github repository, we need to install `git
 sudo apt install git
 ```
 
-# 3. Sever Configuration
+# 3. Server Configuration
 In order to be able to access the webapp from the Internet, we need to set up the firewall and make sure the networking is set up correctly. By finishing this step, you should be able to access your server by visiting `http://your_public_ip` on your browser or via terminal by `curl http://your_public_ip`.
 
 ## 3.1. Firewall
