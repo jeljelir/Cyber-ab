@@ -58,7 +58,7 @@
                                 <div class="alert alert-info" role="alert">
                                     Hint: {% block formHint %}{% endblock %}
                                 </div>
-                                <h1 class="main-heading-detail green-color">Unlock <span class="blue-color">{% block courseSubject %}{% endblock %}</span></h1>
+                                <h1 class="main-heading-detail green-color">Unlock <span class="blue-color">{{ self.courseSubject() }}</span></h1>
                                 <p>To unlock the course, you need to solve a problem or capture the flag (CTF) implemented somewhere in the page or the server.</p>
                                 <h5>Here is the problem you need to solve:</h5>
                                 <p>
