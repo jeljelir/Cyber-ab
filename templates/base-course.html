@@ -88,7 +88,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="course-deatail-img p-3 bg-white-color">
-                                        <img src="{{ url_for('static', filename='img/{{ self.courseNumber() }}.png') }}" alt="{{ self.courseSubject() }}.png') }}">
+                                        <img src="{% block courseImage %}{% endblock %}" alt="{{ self.courseSubject() }}">
                                     </div>
                                 </div>
                             </div>
